@@ -1,7 +1,5 @@
 #!/bin/bash -ex
 #
-
-
 SERVICE_PASSWORD=Welcome123
 TOKEN_PASS=Welcome123
 ADMIN_PASS=Welcome123
@@ -9,7 +7,6 @@ OS_SERVICE_ENDPOINT="http://192.168.1.55:35357/v2.0"
 OS_SERVICE_TOKEN=Welcome123
 
  
-
 ADMIN_PASSWORD=${ADMIN_PASSWORD:-$ADMIN_PASS}
 export SERVICE_ENDPOINT="http://192.168.1.55:35357/v2.0"
 SERVICE_TENANT_NAME=${SERVICE_TENANT_NAME:-service}
@@ -121,4 +118,4 @@ source admin-openrc.sh
 
 sleep 10
 echo "####################CHAY BIET MOI TRUONG##################"
-source admin-openrc
+source admin-openrc.sh
