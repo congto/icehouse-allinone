@@ -36,16 +36,19 @@ ec2_private_dns_show_ip=True
 api_paste_config=/etc/nova/api-paste.ini
 volumes_path=/var/lib/nova/volumes
 enabled_apis=ec2,osapi_compute,metadata
+
 rpc_backend = rabbit
 rabbit_host = $MASTER
 rabbit_userid = guest
 rabbit_password = $RABBIT_PASS 
+
 my_ip = $MASTER
 vncserver_listen = $MASTER
 vncserver_proxyclient_address = $MASTER
 auth_strategy = keystone
 novncproxy_base_url = http://$MASTER:6080/vnc_auto.html
 glance_host = $MASTER
+
 network_api_class = nova.network.neutronv2.api.API
 neutron_url = http://$MASTER:9696
 neutron_auth_strategy = keystone
@@ -56,7 +59,8 @@ neutron_admin_auth_url = http://$MASTER:35357/v2.0
 linuxnet_interface_driver = nova.network.linux_net.LinuxOVSInterfaceDriver
 firewall_driver = nova.virt.firewall.NoopFirewallDriver
 security_group_api = neutron
-service_neutron_metadata_proxy = true
+
+service_neutron_metadata_proxy = True
 neutron_metadata_proxy_shared_secret = $METADATA_SECRET
 
 [database]
