@@ -43,8 +43,8 @@ nova_admin_tenant_id = $SERVICE_ID
 nova_admin_password = $ADMIN_PASS
 nova_admin_auth_url = http://$MASTER:35357/v2.0
 
-neutron_metadata_proxy_shared_secret = $ADMIN_PASS
-service_neutron_metadata_proxy = True
+# neutron_metadata_proxy_shared_secret = $ADMIN_PASS
+# service_neutron_metadata_proxy = True
 
 
 [quotas]
@@ -110,6 +110,7 @@ rm $metadatafile
 touch $metadatafile
 cat << EOF >> $metadatafile
 [DEFAULT]
+verbose = True 
 auth_url = http://$MASTER:5000/v2.0
 auth_region = RegionOne
 admin_tenant_name = service
@@ -130,6 +131,7 @@ rm $dhcpfile
 touch $dhcpfile
 cat << EOF >> $dhcpfile
 [DEFAULT]
+verbose = True 
 interface_driver = neutron.agent.linux.interface.OVSInterfaceDriver
 dhcp_driver = neutron.agent.linux.dhcp.Dnsmasq
 use_namespaces = True
@@ -147,6 +149,7 @@ rm $l3file
 touch $l3file
 cat << EOF >> $l3file
 [DEFAULT]
+verbose = True 
 interface_driver = neutron.agent.linux.interface.OVSInterfaceDriver
 use_namespaces = True
 
