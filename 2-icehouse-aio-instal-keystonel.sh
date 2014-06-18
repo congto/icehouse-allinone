@@ -4,6 +4,7 @@
 TOKEN_PASS=Welcome123
 MYSQL_PASS=Welcome123
 ADMIN_PASS=Welcome123
+SERVICE_PASSWORD=Welcome123
 MASTER=192.168.1.55
 # Cai dat keystone
 apt-get install keystone -y
