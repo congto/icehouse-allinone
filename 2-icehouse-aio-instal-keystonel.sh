@@ -69,5 +69,5 @@ keystone-manage db_sync
 (crontab -l -u keystone 2>&1 | grep -q token_flush) || \
 echo '@hourly /usr/bin/keystone-manage token_flush >/var/log/keystone/keystone-tokenflush.log 2>&1' >> /var/spool/cron/crontabs/keystone
 
-export OS_SERVICE_TOKEN=Welcome123
+export OS_SERVICE_TOKEN=$TOKEN_PASS
 export OS_SERVICE_ENDPOINT=http://$MASTER:35357/v2.0
