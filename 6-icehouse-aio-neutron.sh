@@ -24,16 +24,19 @@ rm $controlneutron
 touch $controlneutron
 cat << EOF >> $controlneutron
 [DEFAULT]
+verbose = True
 state_path = /var/lib/neutron
 lock_path = \$state_path/lock
 core_plugin = ml2
 service_plugins = router
 auth_strategy = keystone
 allow_overlapping_ips = True
+
 rpc_backend = neutron.openstack.common.rpc.impl_kombu
 rabbit_host = $MASTER
 rabbit_userid = guest
 rabbit_password = $RABBIT_PASS
+
 notification_driver = neutron.openstack.common.notifier.rpc_notifier
 notify_nova_on_port_status_changes = True
 notify_nova_on_port_data_changes = True
