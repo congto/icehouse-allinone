@@ -91,5 +91,23 @@ service nova-api restart ;service nova-cert restart; service nova-consoleauth re
 
 
 echo "#############KIEM TRAA LAI DICH VU NOVA##############"
+sleep 5
 nova-manage service list
+
+
+echo "############FIX LOI CHO NOVA##############"
+sleep 5
+dpkg-statoverride --update --add root root 0644 /boot/vmlinuz-$(uname -r)
+
+cat > /etc/kernel/postinst.d/statoverride <<EOF
+#!/bin/sh
+version="\$1"
+# passing the kernel version is required
+[ -z "\${version}" ] && exit 0
+dpkg-statoverride --update --add root root 0644 /boot/vmlinuz-\${version}
+EOF
+
+chmod +x /etc/kernel/postinst.d/statoverride
+
+echo "############KET THUC CAI DAT NOVA##############"
 
