@@ -24,7 +24,7 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 - NICs 02 (ETH0 dùng chế độ bridge, ETH1 dùng VMnet hoặc host only. Chú ý đứng từ máy vật lý có thể truy cập được vào máy ảo bằng cả 2 NICs)
 - Mật khẩu cho tất cả các dịch vụ là Welcome123
 - Cài đặt với quyền root 
-
+.. image:: http://i.imgur.com/3krYzVu.png
 
 2. Thực hiện các script
 ----------
