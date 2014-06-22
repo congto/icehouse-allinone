@@ -80,14 +80,50 @@ Khai báo user, role, teant và endpoint cho các service trong OpenStack::
 
    bash 3-icehouse-aio-creatusetenant.sh
 
-2.4 Cài đặt glance
+Script trên thực hiện tạo các teant có tên là admin, demo, service. Tạo ra service có tên là keystone, glance, nova, cinder, neutron swift
+
+2.4 Cài đặt Glance
 ----
 Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài::
 
    bash 4-icehouse-aio-glance.sh
 
+Script trên thực hiện cài đặt và cấu hình Glance. Sau đó thực hiển tải image cirros (một dạng lite lunix), có tác dụng để kiểm tra các 
+hoạt động của Keystone, Glance và sau này dùng để khởi tạo máy ảo.
 2.5 Cài đặt NOVA và kiểm tra hoạt động
 ----
 Cài đặt các gói về nova::
 
    bash 5-icehouse-aio-nova.sh
+
+2.6 Cài đặt OpenvSwich, cấu hình br-int, br-ex
+----
+Cài đặt OpenvSwtich và cấu hình br-int, br-ex cho Ubuntu::
+  6-icehouse-aio-config-ip-neutron.sh
+  
+2.7 Cài đặt Neutron
+----
+Cài đặt Neutron Server, ML, L3-agent, DHCP-agent, metadata-agent::
+  7-icehouse-aio-neutron.sh
+
+2.8 Cài đặt Horizon
+----
+Cài đặt Horizon để cung cấp GUI cho người dùng thao tác với OpenStack::
+  8-icehouse-aio-horizon.sh
+  
+
+3. Chuyển qua hướng dẫn sử dụng dashboard (horizon)
+----------
+
+Truy cập vào dashboard với IP 192.168.1.55/horizon 
+User: Admin
+Pass: Welcome123
+
+
+
+
+
+
+
+
+
