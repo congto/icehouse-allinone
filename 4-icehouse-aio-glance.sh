@@ -1,6 +1,5 @@
-#!/bin/sh
+#!/bin/bash -ex 
 #
-sh admin-openrc.sh
 
 RABBIT_PASS=Welcome123
 ADMIN_PASS=Welcome123
