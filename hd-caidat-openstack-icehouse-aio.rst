@@ -45,6 +45,11 @@ Thiết lập tên, khai báo file hosts, cấu hình ip address cho các NICs::
 
    bash 0-icehouse-aio-prepare.sh
 
+Chú ý: Khi thưc hiện update hệ thống, nếu xuất hiện dòng dưới thì gõ ENTER để tiếp tục::
+
+   More info: https://wiki.ubuntu.com/ServerTeam/CloudArchive
+   Press [ENTER] to continue or ctrl-c to cancel adding it
+
 2.1 Cài đặt MYSQL và tạo DB cho các thành phần
 -----------------
 Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron::
