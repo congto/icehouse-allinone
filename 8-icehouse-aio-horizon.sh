@@ -1,8 +1,9 @@
 #!/bin/bash -ex
 
 ###################
-#CAI DAT DASHBOARD
+echo " #### CAI DAT DASHBOARD ##### "
 ###################
+sleep 5
 
 echo "#################Cài đặt Dashboard#################"
 apt-get -y install openstack-dashboard memcached && dpkg --purge openstack-dashboard-ubuntu-theme
@@ -18,3 +19,4 @@ echo "ServerName localhost" >> /etc/apache2/httpd.conf
 ## /* Khởi động lại apache và memcached
 service apache2 restart
 service memcached restart
+echo "##### Hoan thanh cai dat Horizon #####"
