@@ -2,6 +2,12 @@
 
 MASTER=192.168.1.55
 GATE_WAY=192.168.1.1
+
+echo "############Cai dat va cau hinh OpenvSwitch ######################"
+sleep 5
+apt-get install -y openvswitch-controller openvswitch-switch openvswitch-datapath-dkms
+
+echo "############# Cau hinh br-int va br-ex cho OpenvSwitch #################"
 ovs-vsctl add-br br-int
 ovs-vsctl add-br br-ex
 ovs-vsctl add-port br-ex eth0
