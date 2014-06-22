@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/sh 
 
 echo "##### Thu hien update he thong truoc khi cai dat #####"
 sleep 3
