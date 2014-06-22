@@ -26,7 +26,7 @@ Cài đặt ubuntu server 12.04 với thông số như sau
 - Cài đặt với quyền root 
 
 
-Thực hiện các script::
+Thực hiện các script
 --------------------
 
 
