@@ -92,7 +92,7 @@ flavor=keystone
 EOF
 
 #
-sleep 10
+sleep 5
 echo "#####################CAU HINH GLANCE REGISTER ##################################"
 #/* Sao luu truoc khi sua file nova.conf
 fileglanceregcontrol=/etc/glance/glance-registry.conf
@@ -124,15 +124,15 @@ flavor=keystone
 
 EOF
 
-sleep 7
+sleep 5
 echo "##########################XOA file glance.sqlite###############"
 # rm /var/lib/glance/glance.sqlite
 
-sleep 7
+sleep 5
 echo " ##########################DONG BO DATABASE CHO GLANCE########"
 glance-manage db_sync
 
-sleep 7
+sleep 5
 echo "##########################KHOI DONG LAI GLANCE########"
 service glance-registry restart
 service glance-api restart
@@ -149,6 +149,8 @@ glance image-create --name "cirros-0.3.2-x86_64" --disk-format qcow2 \
 --container-format bare --is-public True --progress < cirros-0.3.2-x86_64-disk.img
 cd /root/
 
-sleep 7
-echo "##################Kiem tra lai image vua them vao GLANCE########"
+sleep 4
+echo "################## Kiem tra lai image vua them vao GLANCE ########"
 glance image-list
+
+echo "################## Ket thuc qua trinh cai dat GLANCE ########"
