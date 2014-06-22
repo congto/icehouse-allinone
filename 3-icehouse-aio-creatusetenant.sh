@@ -113,12 +113,10 @@ echo "export OS_AUTH_URL=http://192.168.1.55:35357/v2.0" >> admin-openrc.sh
 # Xoa bien moi truong truoc do
 unset OS_SERVICE_TOKEN OS_SERVICE_ENDPOINT
 
-# Chay lai bien moi truoc 
-source admin-openrc.sh
 
 sleep 5
 echo "#################### Thuc thi bien moi truong ##################"
-source admin-openrc.sh
+. ./admin-openrc.sh
 
 echo echo "#################### Hoan thanh cai dat keystone ##################"
 
