@@ -116,7 +116,10 @@ chmod +x admin-openrc.sh
 
 sleep 5
 echo "#################### Thuc thi bien moi truong ##################"
-sh admin-openrc.sh
+cat  admin-openrc.sh >> /etc/profile
+source /etc/profile
+
+cp  admin-openrc.sh /root/admin-openrc.sh
 
 echo echo "#################### Hoan thanh cai dat keystone ##################"
 
