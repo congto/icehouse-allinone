@@ -11,7 +11,7 @@ echo mysql-server mysql-server/root_password_again password $MYSQL_ADMIN_PASS | 
 apt-get update
 apt-get install mysql-server python-mysqldb -y
 
-echo "Cau hinh cho MYSQL"
+echo " ##### Cau hinh cho MYSQL #####"
 sleep 5
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
 #
@@ -22,7 +22,7 @@ character-set-server = utf8" /etc/mysql/my.cnf
 #
 service mysql restart
 
-echo "Tao DATABASE"
+echo " ##### Tao DATABASE #####"
 sleep 5 
 
 cat << EOF | mysql -uroot -p$MYSQL_PASS
@@ -61,4 +61,5 @@ FLUSH PRIVILEGES;
 EOF
 #
 exit;
-echo "Hoan thanh viec ta DB"
+
+echo "##### Hoan thanh viec ta DB #### "
