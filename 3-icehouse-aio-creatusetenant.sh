@@ -103,7 +103,7 @@ keystone endpoint-create \
 # --internalurl=http://192.168.1.55:8776/v2/%\(tenant_id\)s \
 # --adminurl=http://192.168.1.55:8776/v2/%\(tenant_id\)s
 
-sleep 10
+sleep 5
 echo "###########TAO FILE CHO BIEN MOI TRUONG##################"
 echo "export OS_USERNAME=admin" > admin-openrc.sh
 echo "export OS_PASSWORD=Welcome123" >> admin-openrc.sh
@@ -116,6 +116,9 @@ unset OS_SERVICE_TOKEN OS_SERVICE_ENDPOINT
 # Chay lai bien moi truoc 
 source admin-openrc.sh
 
-sleep 10
-echo "####################CHAY BIET MOI TRUONG##################"
+sleep 5
+echo "#################### Thuc thi bien moi truong ##################"
 source admin-openrc.sh
+
+echo echo "#################### Hoan thanh cai dat keystone ##################"
+
