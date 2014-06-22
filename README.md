@@ -17,7 +17,7 @@ Thông tin LAB
 Các bước cài đặt
 ===================
 
-Cài đặt ubuntu server 12.04 với thông số như sau:
+Cài đặt ubuntu server 12.04 với thông số như sau::
 --------------------
 
 - RAM 4GB
@@ -27,7 +27,7 @@ Cài đặt ubuntu server 12.04 với thông số như sau:
 - Cài đặt với quyền root 
 
 
-Thực hiện các script
+Thực hiện các script::
 --------------------
 
 
