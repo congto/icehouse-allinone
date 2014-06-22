@@ -1,5 +1,7 @@
-#!/bin/bash -ex
+#!/bin/sh
 #
+sh admin-openrc.sh
+
 RABBIT_PASS=Welcome123
 ADMIN_PASS=Welcome123
 MYSQL_PASS=Welcome123
