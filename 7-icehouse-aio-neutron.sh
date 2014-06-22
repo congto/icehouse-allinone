@@ -1,11 +1,6 @@
 #!/bin/bash -ex
 #
 
-source admin-openrc.sh 
-echo "#### Kiem tra bien moi truong #####"
-env | grep OS_AUTH_URL
-sleep 3
-
 RABBIT_PASS=Welcome123
 ADMIN_PASS=Welcome123
 MASTER=192.168.1.55
