@@ -120,7 +120,7 @@ admin_tenant_name = service
 admin_user = neutron
 admin_password = $ADMIN_PASS
 nova_metadata_ip = $MASTER
-metadata_proxy_shared_secret = $ADMIN_PASS
+metadata_proxy_shared_secret = $METADATA_SECRET
 
 EOF
 
