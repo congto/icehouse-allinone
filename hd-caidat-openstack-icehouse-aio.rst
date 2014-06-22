@@ -82,6 +82,10 @@ Khai báo user, role, teant và endpoint cho các service trong OpenStack::
 
 Script trên thực hiện tạo các teant có tên là admin, demo, service. Tạo ra service có tên là keystone, glance, nova, cinder, neutron swift
 
+Thực thi lệnh source /etc/profile để khởi tạo biến môi trường::
+   
+   soruce /etc/profile
+
 2.4 Cài đặt Glance
 ----
 Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài::
