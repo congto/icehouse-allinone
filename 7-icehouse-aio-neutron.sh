@@ -163,11 +163,11 @@ sleep 4
 cd /etc/init.d/; for i in $( ls neutron-* ); do sudo service $i restart; done
 
 echo "###################KHOI DONG LAI NEUTRON ###############################"
-sleep 7 
+sleep 10 
 cd /etc/init.d/; for i in $( ls neutron-* ); do sudo service $i restart; done
 cd /root/
 
 
 echo "###################KIEM TRA NEUTRON####################"
-sleep 5 
+sleep 25
 neutron agent-list
