@@ -1,5 +1,5 @@
 Cài đặt OpenStack Icehouse All in one
-
+==
 Thông tin LAB
 - Cài đặt OpenStack Icehouse trên Ubuntu 12.04, môi trường giả lập vmware-workstation
 - Các thành phần cài đặt trong OpenStack: Keystone, Glance, Nova (sử dụng KVM), Neutron, Horizon
@@ -9,10 +9,10 @@ Thông tin LAB
 ===
 
 Các bước cài đặt
-
+==
 
 Cài đặt ubuntu server 12.04 với thông số như sau:
-=====
+
 - RAM 4GB
 - HDD 80GB
 - NICs 02 (ETH0 dùng chế độ bridge, ETH1 dùng VMnet hoặc host only. Chú ý đứng từ máy vật lý có thể truy cập được vào máy ảo bằng cả 2 NICs)
