@@ -36,6 +36,7 @@ Thiết lập tên, khai báo file hosts::
 
 Cài đặt MYSQL và tạo DB cho các thành phần
 ----
+Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron::
   
    bash 1-icehouse-aio-install-mysql.sh
 
@@ -45,7 +46,7 @@ Cài đặt và cấu hình file keystone.conf::
   
    bash 2-icehouse-aio-instal-keystonel.sh
 
-Khai báo user, role, teant và endpoint cho các service trong OpenStack
+Khai báo user, role, tenant, endpoint
 ----
 Khai báo user, role, teant và endpoint cho các service trong OpenStack::
 
