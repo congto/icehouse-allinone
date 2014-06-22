@@ -1,5 +1,11 @@
 #!/bin/bash -ex
 #
+
+source admin-openrc.sh 
+echo "#### Kiem tra bien moi truong #####"
+env | grep OS_AUTH_URL
+sleep 3
+
 RABBIT_PASS=Welcome123
 ADMIN_PASS=Welcome123
 MASTER=192.168.1.55
@@ -7,8 +13,6 @@ LOCAL_IP=192.168.10.10
 METADATA_SECRET=Welcome123
 MYSQL_PASS=Welcome123
 SERVICE_ID=`keystone tenant-get service | awk '$2~/^id/{print $4}'`
-
-source admin-openrc.sh
 
 echo "########## CAI DAT NEUTRON TREN CONTROLLER################"
 sleep 5
