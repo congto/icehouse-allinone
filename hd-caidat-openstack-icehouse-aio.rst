@@ -20,11 +20,19 @@ II. Các bước cài đặt
 Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặc máy vật lý như sau
 
 - RAM 4GB
-- HDD 80GB
-- NICs 02 (ETH0 dùng chế độ bridge, ETH1 dùng VMnet hoặc host only. Chú ý đứng từ máy vật lý có thể truy cập được vào máy ảo bằng cả 2 NICs)
+- 1st HDD (sda) 60GB cài đặt Ubuntu server 12.04-4
+- 2nd HDD (sdb) Làm volume cho cinder
+- 3rd HDD (sdv)) Dùng cho cấu hình swift
+- NIC 1st : External - dùng chế độ bridge - Dải IP 192.168.1.0/24 - dùng để ra (vào) internet.
+- NIC 2nd : Inetnal VM - dùng chế độ vmnet4 (cần setup trong vmware workstation trước khi cài Ubuntu - dải IP  192.168.10.0/24
 - Mật khẩu cho tất cả các dịch vụ là Welcome123
 - Cài đặt với quyền root 
+
+- Ảnh thiết lập cấu hình cho Ubuntu server
 .. image:: http://i.imgur.com/3krYzVu.png
+
+- Ảnh thiết lập network cho vmware workstation 
+.. image:: http://i.imgur.com/pNg16qO.png
 
 2. Thực hiện các script
 ----------
