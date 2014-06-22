@@ -41,16 +41,19 @@ Cài đặt MYSQL và tạo DB cho các thành phần
 
 Cài đặt keystone 
 ----
+Cài đặt và cấu hình file keystone.conf::
   
    bash 2-icehouse-aio-instal-keystonel.sh
 
 Khai báo user, role, teant và endpoint cho các service trong OpenStack
 ----
-  
+Khai báo user, role, teant và endpoint cho các service trong OpenStack::
+
    bash 3-icehouse-aio-creatusetenant.sh
 
 Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài::
 ----
+Cài đặt, cấu hình GLANCE, sau đó tải image có tên là cirros::
    bash 4-icehouse-aio-glance.sh
 
 Cài đặt NOVA và kiểm tra hoạt động
