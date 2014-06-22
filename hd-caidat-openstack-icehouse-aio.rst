@@ -26,11 +26,11 @@ Cài đặt ubuntu server 12.04 với thông số như sau
 
 
 Thực hiện các script
-============
+----------
 
 Update hệ thống và cài đặt các gói bổ trợ
 ----
-Thiết lập tên, khai báo file hosts::
+Thiết lập tên, khai báo file hosts, cấu hình ip address cho các NICs::
 
    bash 0-icehouse-aio-prepare.sh
 
