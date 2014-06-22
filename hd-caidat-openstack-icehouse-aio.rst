@@ -37,7 +37,7 @@ Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ
    
    git clone https://github.com/congto/icehouse-allinone.git
    
-   cd ichehouse-allinone
+   cd icehouse-allinone
    
    chmod +x *.sh
 
