@@ -116,7 +116,10 @@ chmod +x admin-openrc.sh
 
 sleep 5
 echo "#################### Thuc thi bien moi truong ##################"
-. ./admin-openrc.sh
+source admin-openrc.sh
 
 echo echo "#################### Hoan thanh cai dat keystone ##################"
 
+echo "#################### Kiem tra bien moi truong ##################"
+sleep 5
+keystone user-list
