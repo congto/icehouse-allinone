@@ -89,13 +89,15 @@ nova-manage db sync
 echo "#################KHOI DONG LAI NOVA###############"
 sleep 10
 service nova-api restart ;service nova-cert restart; service nova-consoleauth restart ;service nova-scheduler restart;service nova-conductor restart; service nova-novncproxy restart; service nova-compute restart; service nova-console restart
-
+sleep 5
 echo "########### KHOI DONG NOVA LAN 2################"
 service nova-api restart ;service nova-cert restart; service nova-consoleauth restart ;service nova-scheduler restart;service nova-conductor restart; service nova-novncproxy restart; service nova-compute restart; service nova-console restart
 
 
 echo "#############KIEM TRAA LAI DICH VU NOVA##############"
 sleep 7
+nova-manage service list
+sleep 3
 nova-manage service list
 
 echo " "
