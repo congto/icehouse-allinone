@@ -1,6 +1,10 @@
-Cài đặt OpenStack Icehouse All in one
-==
+================================
+  Cài đặt OpenStack Icehouse All in one
+================================
+
+
 .. contents::
+
 
 Thông tin LAB
 - Cài đặt OpenStack Icehouse trên Ubuntu 12.04, môi trường giả lập vmware-workstation
@@ -11,7 +15,7 @@ Thông tin LAB
 ===
 
 Các bước cài đặt
-==
+===================
 
 Cài đặt ubuntu server 12.04 với thông số như sau:
 --------------------
