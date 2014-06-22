@@ -1,5 +1,5 @@
-#!/bin/bash -ex
-#
+#!/bin/sh
+
 # Khoi tao bien
 TOKEN_PASS=Welcome123
 MYSQL_PASS=Welcome123
