@@ -15,7 +15,7 @@ I. Thông tin LAB
 II. Các bước cài đặt
 ============
 
-1. Cài đặt Ubuntu 12.04 trong Vmware Worsktation
+1. Cài đặt Ubuntu 12.04 trong Vmware Workstation
 ----------
 Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặc máy vật lý như sau
 
