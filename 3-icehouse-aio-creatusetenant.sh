@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/sh -ex
 #
 SERVICE_PASSWORD=Welcome123
 TOKEN_PASS=Welcome123
@@ -116,7 +116,7 @@ chmod +x admin-openrc.sh
 
 sleep 5
 echo "#################### Thuc thi bien moi truong ##################"
-source admin-openrc.sh
+sh admin-openrc.sh
 
 echo echo "#################### Hoan thanh cai dat keystone ##################"
 
