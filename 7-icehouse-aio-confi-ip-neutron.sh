@@ -46,5 +46,5 @@ EOF
 
 
 
-echo "Khoi dong lai may"
+echo "############## KHOI DONG LAI MAY VAT LY #################"
 init 6
