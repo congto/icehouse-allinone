@@ -9,8 +9,9 @@ Thông tin LAB
 ===
 
 Các bước cài đặt
-==
--- Cài đặt ubuntu server 12.04 với thông số như sau:
+
+
+Cài đặt ubuntu server 12.04 với thông số như sau:
 =====
 - RAM 4GB
 - HDD 80GB
@@ -18,23 +19,23 @@ Các bước cài đặt
 - Mật khẩu cho tất cả các dịch vụ là Welcome123
 - Cài đặt với quyền root 
 
---Thực hiện các script
-=====
 
-Update hệ thống và cài đặt các gói bổ trợ 
-  bash 0-icehouse-aio-prepare.sh
+Thực hiện các script
 
-Cài đặt MYSQL và tạo DB cho các thành phần
-  bash 1-icehouse-aio-install-mysql.sh
+- Update hệ thống và cài đặt các gói bổ trợ 
+  + bash 0-icehouse-aio-prepare.sh
 
-Cài đặt keystone 
-  bash 2-icehouse-aio-instal-keystonel.sh
+- Cài đặt MYSQL và tạo DB cho các thành phần
+  + bash 1-icehouse-aio-install-mysql.sh
 
-Khai báo user, role, teant và endpoint cho các service trong OpenStack
-  bash 3-icehouse-aio-creatusetenant.sh
+- Cài đặt keystone 
+  + bash 2-icehouse-aio-instal-keystonel.sh
 
-Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài
-  bash 4-icehouse-aio-glance.sh
+- Khai báo user, role, teant và endpoint cho các service trong OpenStack
+  + bash 3-icehouse-aio-creatusetenant.sh
 
-Cài đặt NOVA và kiểm tra hoạt động
-  bash 5-icehouse-aio-nova.sh
+- Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài
+  + bash 4-icehouse-aio-glance.sh
+
+- Cài đặt NOVA và kiểm tra hoạt động
+  + bash 5-icehouse-aio-nova.sh
