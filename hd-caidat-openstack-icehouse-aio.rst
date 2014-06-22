@@ -5,17 +5,17 @@ Hướng dẫn cài đặt bằng script OpenStack Icehouse AIO
 .. contents::
 
 
-Thông tin LAB
+I. hông tin LAB
 ============
 - Cài đặt OpenStack Icehouse trên Ubuntu 12.04, môi trường giả lập vmware-workstation
 - Các thành phần cài đặt trong OpenStack: Keystone, Glance, Nova (sử dụng KVM), Neutron, Horizon
 - Neutron sử dụng plugin ML2, GRE và use case cho mô hình mạng là per-teanant per-router
 - Máy ảo sử dụng 2 Nics. Eth0 dành cho Extenal, API, MGNT. Eth1 dành cho Internal.
 
-Các bước cài đặt
+II. Các bước cài đặt
 ============
 
-Cài đặt Ubuntu 12.04 trong Vmware Worsktation
+1. Cài đặt Ubuntu 12.04 trong Vmware Worsktation
 ----------
 Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặc máy vật lý như sau
 
@@ -26,40 +26,40 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 - Cài đặt với quyền root 
 
 
-Thực hiện các script
+2. hực hiện các script
 ----------
 
-Update hệ thống và cài đặt các gói bổ trợ
+2.0 Update hệ thống và cài đặt các gói bổ trợ
 -----------------
 Thiết lập tên, khai báo file hosts, cấu hình ip address cho các NICs::
 
    bash 0-icehouse-aio-prepare.sh
 
-Cài đặt MYSQL và tạo DB cho các thành phần
+2.1 Cài đặt MYSQL và tạo DB cho các thành phần
 -----------------
 Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron::
   
    bash 1-icehouse-aio-install-mysql.sh
 
-Cài đặt keystone 
+2.2 Cài đặt keystone 
 -----------------
 Cài đặt và cấu hình file keystone.conf::
   
    bash 2-icehouse-aio-instal-keystonel.sh
 
-Khai báo user, role, tenant, endpoint
+2.3 Khai báo user, role, tenant, endpoint
 ----
 Khai báo user, role, teant và endpoint cho các service trong OpenStack::
 
    bash 3-icehouse-aio-creatusetenant.sh
 
-Cài đặt glance
+2.4 Cài đặt glance
 ----
 Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài::
 
    bash 4-icehouse-aio-glance.sh
 
-Cài đặt NOVA và kiểm tra hoạt động
+2.5 Cài đặt NOVA và kiểm tra hoạt động
 ----
 Cài đặt các gói về nova::
 
