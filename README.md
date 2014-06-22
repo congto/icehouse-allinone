@@ -2,6 +2,8 @@
   Cài đặt OpenStack Icehouse All in one
 ================================
 
+[Hướng dẫn cài đặt](hd-caidat-openstack-icehouse-aio.rst)
+=========================================
 
 .. contents::
 
