@@ -8,14 +8,15 @@ SERVICE_PASSWORD=Welcome123
 MASTER=192.168.1.55
 
 echo "##### Cai dat & cau hinh keystone ##### "
+sleep 3
 apt-get install keystone -y
-
 
 #/* Sao luu truoc khi sua file nova.conf
 filekeystone=/etc/keystone/keystone.conf
 test -f $filekeystone.orig || cp $filekeystone $filekeystone.orig
 
-#Chen noi dung file /etc/keystone/keystone.conf
+echo " ##### Chen noi dung file /etc/keystone/keystone.conf ##### "
+sleep 3
 cat << EOF > $filekeystone
 [DEFAULT]
 admin_token=$SERVICE_PASSWORD
