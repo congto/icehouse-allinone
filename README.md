@@ -1,6 +1,6 @@
 ================================
 Cài đặt & HDSD OpenStack Icehouse AIO
-Installation & Use OpenStack Icehouse
+Installation OpenStack Icehouse & Using the Dashboad
 ================================
 
 
