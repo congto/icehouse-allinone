@@ -142,7 +142,7 @@ use_namespaces = True
 EOF
 
 ###################### SAO LUU CAU HINH L3 ###########################"
-echo "############ SUA FILE CAU HINH  L3 ##########3##########"
+echo "############ SUA FILE CAU HINH  L3 ####################"
 sleep 7
 
 
