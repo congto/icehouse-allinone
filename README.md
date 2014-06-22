@@ -31,10 +31,10 @@ Thực hiện các script::
 --------------------
 
 
-- Update hệ thống và cài đặt các gói bổ trợ 
+Update hệ thống và cài đặt các gói bổ trợ ::
   + bash 0-icehouse-aio-prepare.sh
 
-- Cài đặt MYSQL và tạo DB cho các thành phần
+Cài đặt MYSQL và tạo DB cho các thành phần::
   + bash 1-icehouse-aio-install-mysql.sh
 
 - Cài đặt keystone 
