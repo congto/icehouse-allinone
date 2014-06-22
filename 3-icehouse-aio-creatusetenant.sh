@@ -3,12 +3,13 @@
 SERVICE_PASSWORD=Welcome123
 TOKEN_PASS=Welcome123
 ADMIN_PASS=Welcome123
+MASTER=$MASTER
 export OS_SERVICE_TOKEN=Welcome123
-export OS_SERVICE_ENDPOINT="http://192.168.1.55:35357/v2.0"
+export OS_SERVICE_ENDPOINT="http://$MASTER:35357/v2.0"
 
  
 ADMIN_PASSWORD=${ADMIN_PASSWORD:-$ADMIN_PASS}
-export SERVICE_ENDPOINT="http://192.168.1.55:35357/v2.0"
+export SERVICE_ENDPOINT="http://$MASTER:35357/v2.0"
 SERVICE_TENANT_NAME=${SERVICE_TENANT_NAME:-service}
 
 get_id () {
@@ -65,50 +66,50 @@ keystone user-role-add --tenant-id $SERVICE_TENANT --user-id $CINDER_USER --role
 keystone service-create --name=keystone --type=identity --description="OpenStack Identity"
 keystone endpoint-create \
 --service-id=$(keystone service-list | awk '/ identity / {print $2}') \
---publicurl=http://192.168.1.55:5000/v2.0 \
---internalurl=http://192.168.1.55:5000/v2.0 \
---adminurl=http://192.168.1.55:35357/v2.0
+--publicurl=http://$MASTER:5000/v2.0 \
+--internalurl=http://$MASTER:5000/v2.0 \
+--adminurl=http://$MASTER:35357/v2.0
 
 keystone service-create --name=glance --type=image --description="OpenStack Image Service"
 keystone endpoint-create \
 --service-id=$(keystone service-list | awk '/ image / {print $2}') \
---publicurl=http://192.168.1.55:9292 \
---internalurl=http://192.168.1.55:9292 \
---adminurl=http://192.168.1.55:9292
+--publicurl=http://$MASTER:9292 \
+--internalurl=http://$MASTER:9292 \
+--adminurl=http://$MASTER:9292
 
 keystone service-create --name=nova --type=compute --description="OpenStack Compute"
 keystone endpoint-create \
 --service-id=$(keystone service-list | awk '/ compute / {print $2}') \
---publicurl=http://192.168.1.55:8774/v2/%\(tenant_id\)s \
---internalurl=http://192.168.1.55:8774/v2/%\(tenant_id\)s \
---adminurl=http://192.168.1.55:8774/v2/%\(tenant_id\)s
+--publicurl=http://$MASTER:8774/v2/%\(tenant_id\)s \
+--internalurl=http://$MASTER:8774/v2/%\(tenant_id\)s \
+--adminurl=http://$MASTER:8774/v2/%\(tenant_id\)s
 
 keystone service-create --name neutron --type network --description "OpenStack Networking"
 keystone endpoint-create \
---service-id $(keystone service-list | awk '/ network / {print $2}') --publicurl http://192.168.1.55:9696 \
---adminurl http://192.168.1.55:9696 \
---internalurl http://192.168.1.55:9696
+--service-id $(keystone service-list | awk '/ network / {print $2}') --publicurl http://$MASTER:9696 \
+--adminurl http://$MASTER:9696 \
+--internalurl http://$MASTER:9696
 
 # keystone service-create --name=cinder --type=volume --description="OpenStack Block Storage"
 # keystone endpoint-create \
 # --service-id=$(keystone service-list | awk '/ volume / {print $2}') \
-# --publicurl=http://192.168.1.55:8776/v1/%\(tenant_id\)s \
-# --internalurl=http://192.168.1.55:8776/v1/%\(tenant_id\)s \
-# --adminurl=http://192.168.1.55:8776/v1/%\(tenant_id\)s
+# --publicurl=http://$MASTER:8776/v1/%\(tenant_id\)s \
+# --internalurl=http://$MASTER:8776/v1/%\(tenant_id\)s \
+# --adminurl=http://$MASTER:8776/v1/%\(tenant_id\)s
 
 # keystone service-create --name=cinderv2 --type=volumev2 --description="OpenStack Block Storage v2"
 # keystone endpoint-create \
 # --service-id=$(keystone service-list | awk '/ volumev2 / {print $2}') \
-# --publicurl=http://192.168.1.55:8776/v2/%\(tenant_id\)s \
-# --internalurl=http://192.168.1.55:8776/v2/%\(tenant_id\)s \
-# --adminurl=http://192.168.1.55:8776/v2/%\(tenant_id\)s
+# --publicurl=http://$MASTER:8776/v2/%\(tenant_id\)s \
+# --internalurl=http://$MASTER:8776/v2/%\(tenant_id\)s \
+# --adminurl=http://$MASTER:8776/v2/%\(tenant_id\)s
 
 sleep 5
 echo "###########TAO FILE CHO BIEN MOI TRUONG##################"
 echo "export OS_USERNAME=admin" > admin-openrc.sh
 echo "export OS_PASSWORD=Welcome123" >> admin-openrc.sh
 echo "export OS_TENANT_NAME=admin" >> admin-openrc.sh
-echo "export OS_AUTH_URL=http://192.168.1.55:35357/v2.0" >> admin-openrc.sh
+echo "export OS_AUTH_URL=http://$MASTER:35357/v2.0" >> admin-openrc.sh
 
 # Xoa bien moi truong truoc do
 unset OS_SERVICE_TOKEN OS_SERVICE_ENDPOINT
@@ -117,9 +118,12 @@ chmod +x admin-openrc.sh
 sleep 5
 echo "#################### Thuc thi bien moi truong ##################"
 cat  admin-openrc.sh >> /etc/profile
-source /etc/profile
-
 cp  admin-openrc.sh /root/admin-openrc.sh
+
+export OS_USERNAME=admin
+export OS_PASSWORD=Welcome123
+export OS_TENANT_NAME=admin
+export OS_AUTH_URL=http://$MASTER:35357/v2.0
 
 echo echo "#################### Hoan thanh cai dat keystone ##################"
 
