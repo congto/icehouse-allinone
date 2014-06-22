@@ -33,10 +33,13 @@ Cài đặt gói git và phân quyền cho script
 ----------
 Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ github về::
 
-apt-get install git -y
-git clone https://github.com/congto/icehouse-allinone.git
-cd ichehouse-allinone
-chmod +x *.sh
+   apt-get install git -y
+   
+   git clone https://github.com/congto/icehouse-allinone.git
+   
+   cd ichehouse-allinone
+   
+   chmod +x *.sh
 
 2.0 Update hệ thống và cài đặt các gói bổ trợ
 -----------------
