@@ -26,8 +26,7 @@ Cài đặt ubuntu server 12.04 với thông số như sau
 
 
 Thực hiện các script
-===================
-
+----------
 
 Update hệ thống và cài đặt các gói bổ trợ
 ----
