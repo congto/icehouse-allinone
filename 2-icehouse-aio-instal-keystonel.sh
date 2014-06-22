@@ -6,7 +6,8 @@ MYSQL_PASS=Welcome123
 ADMIN_PASS=Welcome123
 SERVICE_PASSWORD=Welcome123
 MASTER=192.168.1.55
-# Cai dat keystone
+
+echo "##### Cai dat & cau hinh keystone ##### "
 apt-get install keystone -y
 
 
@@ -55,15 +56,17 @@ Distribution = Ubuntu
 
 EOF
 #
-# Xoa DB mac dinh
+echo "##### Xoa DB mac dinh ##### "
+sleep 3
 rm  /var/lib/keystone/keystone.db
 
-#Khoi dong lai MYSQL
+echo "##### Khoi dong lai MYSQL ##### "
 service keystone restart
 sleep 3
 service keystone restart
 
-# Dong bo cac bang trong DB
+echo " ##### Dong bo cac bang trong DB ##### "
+sleep 3
 keystone-manage db_sync
 
 (crontab -l -u keystone 2>&1 | grep -q token_flush) || \
