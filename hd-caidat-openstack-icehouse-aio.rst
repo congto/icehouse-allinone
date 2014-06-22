@@ -54,6 +54,7 @@ Khai báo user, role, teant và endpoint cho các service trong OpenStack::
 Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài
 ----
 Cài đặt, cấu hình GLANCE, sau đó tải image có tên là cirros::
+
    bash 4-icehouse-aio-glance.sh
 
 Cài đặt NOVA và kiểm tra hoạt động
