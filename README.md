@@ -4,13 +4,6 @@ Installation OpenStack Icehouse & Using the Dashboad
 ================================
 
 
-[How to install OpenStack AIO on Ubuntu Server 12.04](hd-caidat-openstack-icehouse-aio.rst)
-=========================================
-
-[Using the Dashboard OpenStack ](hd-sudung-openstack-icehouse-aio.rst)
-=========================================
-
-
 [Hướng dẫn cài đặt OpenStack AIO](hd-caidat-openstack-icehouse-aio.rst)
 =========================================
 
