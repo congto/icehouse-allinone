@@ -29,8 +29,6 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 2. Thực hiện các script
 ----------
 
-Cài đặt gói git và phân quyền cho script
-----------
 Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ github về::
 
    apt-get install git -y
