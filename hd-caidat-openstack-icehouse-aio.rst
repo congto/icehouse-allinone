@@ -5,7 +5,7 @@ Hướng dẫn cài đặt bằng script OpenStack Icehouse AIO
 .. contents::
 
 
-I. hông tin LAB
+I. Thông tin LAB
 ============
 - Cài đặt OpenStack Icehouse trên Ubuntu 12.04, môi trường giả lập vmware-workstation
 - Các thành phần cài đặt trong OpenStack: Keystone, Glance, Nova (sử dụng KVM), Neutron, Horizon
@@ -26,7 +26,7 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 - Cài đặt với quyền root 
 
 
-2. hực hiện các script
+2. Thực hiện các script
 ----------
 
 2.0 Update hệ thống và cài đặt các gói bổ trợ
