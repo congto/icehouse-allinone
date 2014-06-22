@@ -50,6 +50,10 @@ Chú ý: Khi thưc hiện update hệ thống, nếu xuất hiện dòng dưới
    More info: https://wiki.ubuntu.com/ServerTeam/CloudArchive
    Press [ENTER] to continue or ctrl-c to cancel adding it
 
+Sau khi thực hiện script trên xong, hệ thống sẽ khởi động lại. Lúc này bạn đăng nhập vào hệ thống và di chuyển vào thưc mục icehouse-allinone bằng lệnh::
+
+    cd icehouse-allinone
+
 2.1 Cài đặt MYSQL và tạo DB cho các thành phần
 -----------------
 Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron::
