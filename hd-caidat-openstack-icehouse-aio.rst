@@ -15,8 +15,9 @@ Thông tin LAB
 Các bước cài đặt
 ============
 
-Cài đặt ubuntu server 12.04 với thông số như sau
--------
+Cài đặt Ubuntu 12.04 trong Vmware Worsktation
+----------
+Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặc máy vật lý như sau::
 
 - RAM 4GB
 - HDD 80GB
