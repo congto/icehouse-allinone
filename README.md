@@ -1,4 +1,4 @@
-Hướng dẫn cài đặt OpenStack Icehouse trên 1 node (All in one)
+Cài đặt OpenStack Icehouse trên 1 node (All in one)
 ==
 
 Thông tin LAB
@@ -10,16 +10,15 @@ Thông tin LAB
 ===
 
 Các bước cài đặt
-==
-- Cài đặt ubuntu server 12.04 với thông số như sau:
+====
+-- Cài đặt ubuntu server 12.04 với thông số như sau:
 - RAM 4GB
 - HDD 80GB
 - NICs 02 (ETH0 dùng chế độ bridge, ETH1 dùng VMnet hoặc host only. Chú ý đứng từ máy vật lý có thể truy cập được vào máy ảo bằng cả 2 NICs)
 - Mật khẩu cho tất cả các dịch vụ là Welcome123
 - Cài đặt với quyền root 
 
-===
-Thực hiện các script
+--Thực hiện các script
 
 Update hệ thống và cài đặt các gói bổ trợ 
   bash 0-icehouse-aio-prepare.sh
