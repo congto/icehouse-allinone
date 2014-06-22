@@ -30,6 +30,7 @@ Thực hiện các script
 
 Update hệ thống và cài đặt các gói bổ trợ
 ----
+Thiết lập tên, khai báo file hosts::
 
    bash 0-icehouse-aio-prepare.sh
 
