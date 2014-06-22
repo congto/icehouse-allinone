@@ -11,7 +11,6 @@ Thông tin LAB
 - Neutron sử dụng plugin ML2, GRE và use case cho mô hình mạng là per-teanant per-router
 - Máy ảo sử dụng 2 Nics. Eth0 dành cho Extenal, API, MGNT. Eth1 dành cho Internal.
 
-===
 
 Các bước cài đặt
 ===================
@@ -27,23 +26,29 @@ Cài đặt ubuntu server 12.04 với thông số như sau
 
 
 Thực hiện các script
-----------
+===================
 
 
 Update hệ thống và cài đặt các gói bổ trợ
+----------
   + bash 0-icehouse-aio-prepare.sh
 
 Cài đặt MYSQL và tạo DB cho các thành phần
+----------
   + bash 1-icehouse-aio-install-mysql.sh
 
-- Cài đặt keystone 
+Cài đặt keystone 
+----------
   + bash 2-icehouse-aio-instal-keystonel.sh
 
-- Khai báo user, role, teant và endpoint cho các service trong OpenStack
+Khai báo user, role, teant và endpoint cho các service trong OpenStack
+----------
   + bash 3-icehouse-aio-creatusetenant.sh
 
-- Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài
+Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài
+----------
   + bash 4-icehouse-aio-glance.sh
 
-- Cài đặt NOVA và kiểm tra hoạt động
+Cài đặt NOVA và kiểm tra hoạt động
+----------
   + bash 5-icehouse-aio-nova.sh
