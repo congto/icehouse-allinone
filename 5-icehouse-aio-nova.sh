@@ -98,7 +98,7 @@ echo "#############KIEM TRAA LAI DICH VU NOVA##############"
 sleep 5
 nova-manage service list
 
-
+echo " "
 echo "############FIX LOI CHO NOVA##############"
 sleep 5
 dpkg-statoverride --update --add root root 0644 /boot/vmlinuz-$(uname -r)
