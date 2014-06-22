@@ -55,6 +55,6 @@ Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Gla
 
 Cài đặt NOVA và kiểm tra hoạt động
 ----
-Cài đặt các gói về nova 
+Cài đặt các gói về nova:
 
    bash 5-icehouse-aio-nova.sh
