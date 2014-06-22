@@ -28,6 +28,14 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 
 2. Thực hiện các script
 ----------
+Trước khi thực hiện các script, đảm bảo máy chủ kết nối được internet. Cài đặt gói git và thực hiện theo các bưới dưới::
+apt-get install git -y
+
+git clone https://github.com/congto/icehouse-allinone.git
+
+cd ichehouse-allinone
+
+chmod +x *.sh
 
 2.0 Update hệ thống và cài đặt các gói bổ trợ
 -----------------
