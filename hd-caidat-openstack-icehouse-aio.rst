@@ -17,7 +17,7 @@ Các bước cài đặt
 ===================
 
 Cài đặt ubuntu server 12.04 với thông số như sau
---------------------
+----------
 
 - RAM 4GB
 - HDD 80GB
@@ -27,13 +27,13 @@ Cài đặt ubuntu server 12.04 với thông số như sau
 
 
 Thực hiện các script
---------------------
+----------
 
 
-Update hệ thống và cài đặt các gói bổ trợ::
+Update hệ thống và cài đặt các gói bổ trợ
   + bash 0-icehouse-aio-prepare.sh
 
-Cài đặt MYSQL và tạo DB cho các thành phần::
+Cài đặt MYSQL và tạo DB cho các thành phần
   + bash 1-icehouse-aio-install-mysql.sh
 
 - Cài đặt keystone 
