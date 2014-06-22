@@ -7,3 +7,6 @@ Cài đặt & HDSD OpenStack Icehouse AIO
 =========================================
 
 
+[Hướng dẫn sử dụng OpenStack AIO](hd-sudung-openstack-icehouse-aio.rst)
+=========================================
+
