@@ -7,9 +7,10 @@ Thông tin LAB
 - Neutron sử dụng plugin ML2, GRE và use case cho mô hình mạng là per-teanant per-router
 - Máy ảo sử dụng 2 Nics. Eth0 dành cho Extenal, API, MGNT. Eth1 dành cho Internal.
 
-==
+===
 
 Các bước cài đặt
+==
 - Cài đặt ubuntu server 12.04 với thông số như sau:
 - RAM 4GB
 - HDD 80GB
@@ -17,7 +18,7 @@ Các bước cài đặt
 - Mật khẩu cho tất cả các dịch vụ là Welcome123
 - Cài đặt với quyền root 
 
-==
+===
 Thực hiện các script
 
 Update hệ thống và cài đặt các gói bổ trợ 
