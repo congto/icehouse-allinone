@@ -76,7 +76,7 @@ Cài đặt và cấu hình file keystone.conf::
 
 2.3 Khai báo user, role, tenant, endpoint
 ----
-Thực thi biến môi trường 
+Thực thi biến môi trường ::
    
    eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
    MASTER=$eth0_address
