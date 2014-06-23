@@ -76,15 +76,15 @@ Cài đặt và cấu hình file keystone.conf::
 
 2.3 Khai báo user, role, tenant, endpoint
 ----
+Thực thi lệnh source /etc/profile để khởi tạo biến môi trường::
+   
+   source /etc/profile
+   
 Khai báo user, role, teant và endpoint cho các service trong OpenStack::
 
    bash 3-icehouse-aio-creatusetenant.sh
 
 Script trên thực hiện tạo các teant có tên là admin, demo, service. Tạo ra service có tên là keystone, glance, nova, cinder, neutron swift
-
-Thực thi lệnh source /etc/profile để khởi tạo biến môi trường::
-   
-   source /etc/profile
 
 2.4 Cài đặt Glance
 ----
