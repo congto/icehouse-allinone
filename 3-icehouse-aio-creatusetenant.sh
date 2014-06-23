@@ -79,9 +79,9 @@ keystone endpoint-create \
 keystone service-create --name=glance --type=image --description="OpenStack Image Service"
 keystone endpoint-create \
 --service-id=$(keystone service-list | awk '/ image / {print $2}') \
---publicurl=http://$MASTER:9292 \
---internalurl=http://$MASTER:9292 \
---adminurl=http://$MASTER:9292
+--publicurl=http://$MASTER:9292/v2 \
+--internalurl=http://$MASTER:9292/v2 \
+--adminurl=http://$MASTER:9292/v2
 
 keystone service-create --name=nova --type=compute --description="OpenStack Compute"
 keystone endpoint-create \
