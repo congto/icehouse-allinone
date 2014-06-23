@@ -76,14 +76,22 @@ Cài đặt và cấu hình file keystone.conf::
 
 2.3 Khai báo user, role, tenant, endpoint
 ----
-Thực thi lệnh source /etc/profile để khởi tạo biến môi trường::
+Thực thi biến môi trường 
    
-   source /etc/profile
-   
+   eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
+   MASTER=$eth0_address
+   TOKEN_PASS=Welcome123
+   export OS_SERVICE_TOKEN=$TOKEN_PASS
+   export OS_SERVICE_ENDPOINT=http://$MASTER:35357/v2.0
+
 Khai báo user, role, teant và endpoint cho các service trong OpenStack::
 
    bash 3-icehouse-aio-creatusetenant.sh
 
+Thực thi lệnh source /etc/profile để khởi tạo biến môi trường::
+   
+   source /etc/profile
+   
 Script trên thực hiện tạo các teant có tên là admin, demo, service. Tạo ra service có tên là keystone, glance, nova, cinder, neutron swift
 
 2.4 Cài đặt Glance
