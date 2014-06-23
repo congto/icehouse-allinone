@@ -9,7 +9,9 @@ MYSQL_ADMIN_PASS=Welcome123
 echo mysql-server mysql-server/root_password password $MYSQL_ADMIN_PASS | debconf-set-selections
 echo mysql-server mysql-server/root_password_again password $MYSQL_ADMIN_PASS | debconf-set-selections
 apt-get update
-apt-get install mysql-server python-mysqldb -y
+
+apt-get -y install mysql-server python-mysqldb curl
+
 
 echo " ##### Cau hinh cho MYSQL #####"
 sleep 5
