@@ -5,7 +5,11 @@ TOKEN_PASS=Welcome123
 MYSQL_PASS=Welcome123
 ADMIN_PASS=Welcome123
 SERVICE_PASSWORD=Welcome123
-MASTER=192.168.1.55
+eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
+eth1_address=`/sbin/ifconfig eth1 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
+MASTER=$eth0_address
+LOCAL_IP=$eth1_address
+GATEWAY_IP=192.168.1.1
 
 echo "##### Cai dat & cau hinh keystone ##### "
 sleep 3
