@@ -15,7 +15,7 @@ GATEWAY_IP=192.168.1.1
 echo "########## CAI DAT NOVA TREN CONTROLLER ################"
 sleep 5 
 
-nova-api nova-cert nova-conductor nova-consoleauth \
+apt-get install -y nova-api nova-cert nova-conductor nova-consoleauth \
 nova-novncproxy nova-scheduler python-novaclient \
 nova-compute-kvm python-guestfs 
 
