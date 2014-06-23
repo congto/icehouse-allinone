@@ -39,14 +39,14 @@ rabbit_host = localhost
 rabbit_port = 5672
 rabbit_use_ssl = false
 rabbit_userid = guest
-rabbit_password = $RABBIT_PASS
+rabbit_password = guest
 rabbit_virtual_host = /
 rabbit_notification_exchange = glance
 rabbit_notification_topic = notifications
 rabbit_durable_queues = False
 qpid_notification_exchange = glance
 qpid_notification_topic = notifications
-qpid_hostname = $MASTER
+qpid_hostname = localhost
 qpid_port = 5672
 qpid_username =
 qpid_password =
@@ -82,7 +82,7 @@ scrub_time = 43200
 scrubber_datadir = /var/lib/glance/scrubber
 image_cache_dir = /var/lib/glance/image-cache/
 [database]
-sqlite_db = /var/lib/glance/glance.sqlite
+# sqlite_db = /var/lib/glance/glance.sqlite
 backend = sqlalchemy
 connection = mysql://glance:$MYSQL_PASS@$MASTER/glance
 [keystone_authtoken]
