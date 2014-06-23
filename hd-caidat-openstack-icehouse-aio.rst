@@ -116,19 +116,19 @@ Cài đặt các gói về nova::
 ----
 Cài đặt OpenvSwtich và cấu hình br-int, br-ex cho Ubuntu::
   
-  6-icehouse-aio-config-ip-neutron.sh
+  bash 6-icehouse-aio-config-ip-neutron.sh
   
 2.7 Cài đặt Neutron
 ----
 Cài đặt Neutron Server, ML, L3-agent, DHCP-agent, metadata-agent::
   
-  7-icehouse-aio-neutron.sh
+  bash 7-icehouse-aio-neutron.sh
 
 2.8 Cài đặt Horizon
 ----
 Cài đặt Horizon để cung cấp GUI cho người dùng thao tác với OpenStack::
   
-  8-icehouse-aio-horizon.sh
+  bash 8-icehouse-aio-horizon.sh
   
 
 3. Chuyển qua hướng dẫn sử dụng dashboard (horizon)
