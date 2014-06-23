@@ -108,11 +108,13 @@ Cài đặt OpenvSwtich và cấu hình br-int, br-ex cho Ubuntu::
 2.7 Cài đặt Neutron
 ----
 Cài đặt Neutron Server, ML, L3-agent, DHCP-agent, metadata-agent::
+  
   7-icehouse-aio-neutron.sh
 
 2.8 Cài đặt Horizon
 ----
 Cài đặt Horizon để cung cấp GUI cho người dùng thao tác với OpenStack::
+  
   8-icehouse-aio-horizon.sh
   
 
