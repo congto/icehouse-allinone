@@ -1,9 +1,10 @@
 #!/bin/bash -ex
 #
 
+TOKEN_PASS=Welcome123
 RABBIT_PASS=Welcome123
 ADMIN_PASS=Welcome123
-METADATA_SECRET=Welcome123
+METADATA_SECRET=$TOKEN_PASS
 MYSQL_PASS=Welcome123
 SERVICE_ID=`keystone tenant-get service | awk '$2~/^id/{print $4}'`
 #
