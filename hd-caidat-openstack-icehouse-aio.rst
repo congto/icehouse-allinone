@@ -84,7 +84,7 @@ Script trên thực hiện tạo các teant có tên là admin, demo, service. T
 
 Thực thi lệnh source /etc/profile để khởi tạo biến môi trường::
    
-   soruce /etc/profile
+   source /etc/profile
 
 2.4 Cài đặt Glance
 ----
