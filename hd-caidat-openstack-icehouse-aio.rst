@@ -89,6 +89,7 @@ Khai báo user, role, teant và endpoint cho các service trong OpenStack::
    bash 3-icehouse-aio-creatusetenant.sh
 
 Chạy lệnh để hủy biến môi trường::
+
    unset OS_SERVICE_ENDPOINT OS_SERVICE_TOKEN
 
 Thực thi lệnh source /etc/profile để khởi tạo biến môi trường::
