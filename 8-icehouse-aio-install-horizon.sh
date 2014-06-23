@@ -27,4 +27,4 @@ echo "##### Hoan thanh cai dat Horizon #####"
 echo "##### THONG TIN DANG NHAP VAO HORIZON ##### "
 echo "URL: http://$MASTER/horizon"
 echo "User: Admin"
-echo "Pass: $ADMIN_PASS"
+echo "Password:" $OS_PASSWORD
