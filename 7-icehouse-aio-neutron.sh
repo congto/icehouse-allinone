@@ -24,18 +24,17 @@ rm $controlneutron
 touch $controlneutron
 cat << EOF >> $controlneutron
 [DEFAULT]
-verbose = True
 state_path = /var/lib/neutron
 lock_path = \$state_path/lock
 core_plugin = ml2
 service_plugins = router
 auth_strategy = keystone
 allow_overlapping_ips = True
-
 rpc_backend = neutron.openstack.common.rpc.impl_kombu
+
 rabbit_host = $MASTER
+rabbit_password = $ADMIN_PASS
 rabbit_userid = guest
-rabbit_password = $RABBIT_PASS
 
 notification_driver = neutron.openstack.common.notifier.rpc_notifier
 notify_nova_on_port_status_changes = True
@@ -46,22 +45,18 @@ nova_admin_tenant_id = $SERVICE_ID
 nova_admin_password = $ADMIN_PASS
 nova_admin_auth_url = http://$MASTER:35357/v2.0
 
-# neutron_metadata_proxy_shared_secret = $ADMIN_PASS
-# service_neutron_metadata_proxy = True
-
-
 [quotas]
+
 [agent]
 root_helper = sudo /usr/bin/neutron-rootwrap /etc/neutron/rootwrap.conf
 
 [keystone_authtoken]
-auth_uri = http://$MASTER:5000
-auth_host = $MASTER
+auth_host = 127.0.0.1
 auth_port = 35357
 auth_protocol = http
 admin_tenant_name = service
 admin_user = neutron
-admin_password = $ADMIN_PASS
+admin_password = SERVICE_ID
 signing_dir = \$state_path/keystone-signing
 
 [database]
@@ -87,14 +82,20 @@ cat << EOF >> $controlML2
 type_drivers = gre
 tenant_network_types = gre
 mechanism_drivers = openvswitch
+
 [ml2_type_flat]
+
 [ml2_type_vlan]
+
 [ml2_type_gre]
 tunnel_id_ranges = 1:1000
+
 [ml2_type_vxlan]
+
 [securitygroup]
 enable_security_group = True
 firewall_driver = neutron.agent.linux.iptables_firewall.OVSHybridIptablesFirewallDriver
+
 [ovs]
 local_ip = $LOCAL_IP
 tunnel_type = gre
@@ -114,7 +115,7 @@ touch $metadatafile
 cat << EOF >> $metadatafile
 [DEFAULT]
 verbose = True 
-auth_url = http://$MASTER:5000/v2.0
+auth_url = http://localhost:5000/v2.0
 auth_region = RegionOne
 admin_tenant_name = service
 admin_user = neutron
