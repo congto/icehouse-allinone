@@ -31,9 +31,9 @@ iface eth1 inet static
 address $LOCAL_IP
 netmask 255.255.255.0
 
-
-
 EOF
+
+/etc/init.d/networking restart 
 
 echo "##### Thu hien update he thong truoc khi cai dat #####"
 sleep 3
