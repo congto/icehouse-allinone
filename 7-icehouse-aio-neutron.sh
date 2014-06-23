@@ -5,7 +5,7 @@ RABBIT_PASS=Welcome123
 ADMIN_PASS=Welcome123
 MASTER=192.168.1.55
 LOCAL_IP=192.168.10.10
-METADATA_SECRET=Welcome123
+METADATA_SECRET=OpenStack1
 MYSQL_PASS=Welcome123
 SERVICE_ID=`keystone tenant-get service | awk '$2~/^id/{print $4}'`
 
