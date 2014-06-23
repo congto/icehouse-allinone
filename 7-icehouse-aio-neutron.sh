@@ -17,7 +17,8 @@ GATEWAY_IP=192.168.1.1
 
 echo "########## CAI DAT NEUTRON TREN CONTROLLER################"
 sleep 5
-apt-get install -y neutron-server neutron-common neutron-plugin-openvswitch-agent openvswitch-datapath-dkms neutron-l3-agent neutron-dhcp-agent neutron-plugin-ml2 
+apt-get -y install neutron-server neutron-plugin-ml2 neutron-plugin-openvswitch-agent \
+openvswitch-datapath-dkms neutron-l3-agent neutron-dhcp-agent
 
 ######## SAO LUU CAU HINH NEUTRON.CONF CHO CONTROLLER##################"
 echo "############ SUA FILE CAU HINH  NEUTRON CHO CONTROLLER##########"
