@@ -97,7 +97,8 @@ flavor=keystone
 [store_type_location_strategy]
 
 EOF
-
+chown glance $fileglanceapicontrol
+chgrp glance $fileglanceapicontrol
 #
 sleep 5
 echo "#####################CAU HINH GLANCE REGISTER ##################################"
@@ -131,6 +132,8 @@ flavor=keystone
 
 EOF
 
+chown glance $fileglanceregcontrol
+chgrp glance $fileglanceregcontrol
 sleep 5
 echo "##########################XOA file glance.sqlite###############"
 # rm /var/lib/glance/glance.sqlite
