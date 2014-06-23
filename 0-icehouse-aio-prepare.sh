@@ -2,9 +2,12 @@
 
 eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
 eth1_address=`/sbin/ifconfig eth1 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
-MASTER = $eth0_address
-LOCAL_IP = $eth1_address
-GATEWAY_IP = 192.168.1.1
+MASTER=$eth0_address
+LOCAL_IP=$eth1_address
+GATEWAY_IP=192.168.1.1
+
+echo "##### CAU HINH IP STATIC CHO NICs #####"
+sleep 3
 
 ifaces=/etc/network/interfaces
 test -f $ifaces.orig || cp $ifaces $ifaces.orig
