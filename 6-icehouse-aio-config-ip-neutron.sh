@@ -32,7 +32,7 @@ auto br-ex
 iface br-ex inet static
 address $MASTER
 netmask 255.255.255.0
-gateway $GATE_WAY
+gateway $GATEWAY_IP
 dns-nameservers 8.8.8.8
 
 auto eth0
@@ -47,13 +47,11 @@ iface eth1 inet static
 address $LOCAL_IP
 netmask 255.255.255.0
 
-auto eth2
-iface eth2 inet static
-address 192.168.100.10
-netmask 255.255.255.0
+# auto eth2
+# iface eth2 inet static
+# address 192.168.100.10
+#netmask 255.255.255.0
 EOF
-
-
 
 echo "############## KHOI DONG LAI MAY VAT LY #################"
 init 6
