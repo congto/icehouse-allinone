@@ -3,11 +3,15 @@
 
 RABBIT_PASS=Welcome123
 ADMIN_PASS=Welcome123
-MASTER=192.168.1.55
-LOCAL_IP=192.168.10.10
 METADATA_SECRET=OpenStack1
 MYSQL_PASS=Welcome123
 SERVICE_ID=`keystone tenant-get service | awk '$2~/^id/{print $4}'`
+#
+eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
+eth1_address=`/sbin/ifconfig eth1 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
+MASTER=$eth0_address
+LOCAL_IP=$eth1_address
+GATEWAY_IP=192.168.1.1
 
 echo "########## CAI DAT NEUTRON TREN CONTROLLER################"
 sleep 5
