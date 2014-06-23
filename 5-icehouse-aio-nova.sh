@@ -3,7 +3,7 @@
 RABBIT_PASS=Welcome123
 ADMIN_PASS=Welcome123
 MASTER=192.168.1.55
-METADATA_SECRET=Welcome123
+METADATA_SECRET=OpenStack1
 MYSQL_PASS=Welcome123
 
 echo "########## CAI DAT NOVA TREN CONTROLLER################"
@@ -40,7 +40,7 @@ enabled_apis=ec2,osapi_compute,metadata
 rpc_backend = rabbit
 rabbit_host = $MASTER
 rabbit_userid = guest
-rabbit_password = $RABBIT_PASS 
+rabbit_password = $RABBIT_PASS
 
 my_ip = $MASTER
 vncserver_listen = $MASTER
@@ -59,10 +59,10 @@ neutron_admin_auth_url = http://$MASTER:35357/v2.0
 linuxnet_interface_driver = nova.network.linux_net.LinuxOVSInterfaceDriver
 firewall_driver = nova.virt.firewall.NoopFirewallDriver
 security_group_api = neutron
-
-service_neutron_metadata_proxy = True
+service_neutron_metadata_proxy = true
 neutron_metadata_proxy_shared_secret = $METADATA_SECRET
-
+ 
+ 
 [database]
 connection = mysql://nova:$MYSQL_PASS@$MASTER/nova
  
@@ -74,7 +74,6 @@ auth_protocol = http
 admin_tenant_name = service
 admin_user = nova
 admin_password = $ADMIN_PASS
-
 
 EOF
 
