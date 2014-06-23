@@ -2,7 +2,8 @@
 #
 RABBIT_PASS=Welcome123
 ADMIN_PASS=Welcome123
-METADATA_SECRET=Welcome123
+TOKEN_PASS=Welcome123
+METADATA_SECRET=$TOKEN_PASS
 MYSQL_PASS=Welcome123
 #
 eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
