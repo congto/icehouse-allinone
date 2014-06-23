@@ -15,7 +15,9 @@ GATEWAY_IP=192.168.1.1
 echo "########## CAI DAT NOVA TREN CONTROLLER ################"
 sleep 5 
 
-apt-get install -y nova-api nova-cert nova-conductor nova-consoleauth nova-novncproxy nova-scheduler python-novaclient nova-compute nova-console nova-compute-kvm python-guestfs
+nova-api nova-cert nova-conductor nova-consoleauth \
+nova-novncproxy nova-scheduler python-novaclient \
+nova-compute-kvm python-guestfs 
 
 echo "########## SAO LUU CAU HINH cho NOVA ##################"
 sleep 7
@@ -93,11 +95,23 @@ nova-manage db sync
 
 echo "############# KHOI DONG LAI NOVA ############"
 sleep 10
-service nova-api restart ;service nova-cert restart; service nova-consoleauth restart ;service nova-scheduler restart;service nova-conductor restart; service nova-novncproxy restart; service nova-compute restart; service nova-console restart
+service nova-conductor restart
+service nova-api restart
+service nova-cert restart
+service nova-consoleauth restart
+service nova-scheduler restart
+service nova-novncproxy restart
+service nova-compute restart
+
 sleep 5
 echo "############# KHOI DONG NOVA LAN 2 ############"
-service nova-api restart ;service nova-cert restart; service nova-consoleauth restart ;service nova-scheduler restart;service nova-conductor restart; service nova-novncproxy restart; service nova-compute restart; service nova-console restart
-
+service nova-conductor restart
+service nova-api restart
+service nova-cert restart
+service nova-consoleauth restart
+service nova-scheduler restart
+service nova-novncproxy restart
+service nova-compute restart
 
 echo "############# KIEM TRAA LAI DICH VU NOVA ############"
 sleep 7
