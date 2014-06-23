@@ -2,7 +2,7 @@
 #
 RABBIT_PASS=Welcome123
 ADMIN_PASS=Welcome123
-METADATA_SECRET=OpenStack1
+METADATA_SECRET=Welcome123
 MYSQL_PASS=Welcome123
 #
 eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
