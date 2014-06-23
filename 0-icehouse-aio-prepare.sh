@@ -6,6 +6,8 @@ MASTER=$eth0_address
 LOCAL_IP=$eth1_address
 GATEWAY_IP=192.168.1.1
 
+RABBIT_PASS=Welcome123
+
 echo "##### CAU HINH IP STATIC CHO NICs #####"
 sleep 3
 
@@ -104,7 +106,7 @@ apt-get -y install rabbitmq-server
 
 echo "##### Khai bao mat khau cho RABBITMQ #####"
 sleep 3
-rabbitmqctl change_password guest Welcome123
+rabbitmqctl change_password guest $RABBIT_PASS
 echo " ##### Khoi dong lai may ##### "
 sleep 3
 
