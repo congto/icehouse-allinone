@@ -44,7 +44,7 @@ iface eth0 inet manual
 
 auto eth1
 iface eth1 inet static
-address 192.168.10.10
+address $LOCAL_IP
 netmask 255.255.255.0
 
 auto eth2
