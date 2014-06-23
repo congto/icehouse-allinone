@@ -60,7 +60,7 @@ auth_port = 35357
 auth_protocol = http
 admin_tenant_name = service
 admin_user = neutron
-admin_password = SERVICE_ID
+admin_password = $ADMIN_PASS
 signing_dir = \$state_path/keystone-signing
 
 [database]
