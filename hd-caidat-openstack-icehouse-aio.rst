@@ -115,6 +115,7 @@ Cài đặt các gói về nova::
 2.6 Cài đặt OpenvSwich, cấu hình br-int, br-ex
 ----
 Cài đặt OpenvSwtich và cấu hình br-int, br-ex cho Ubuntu::
+  
   6-icehouse-aio-config-ip-neutron.sh
   
 2.7 Cài đặt Neutron
