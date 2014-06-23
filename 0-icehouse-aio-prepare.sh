@@ -1,5 +1,40 @@
 #!/bin/bash -ex 
 
+eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
+eth1_address=`/sbin/ifconfig eth1 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
+MASTER = $eth0_address
+LOCAL_IP = $eth1_address
+GATEWAY_IP = 192.168.1.1
+
+ifaces=/etc/network/interfaces
+test -f $ifaces.orig || cp $ifaces $ifaces.orig
+rm $ifaces
+touch $ifaces
+cat << EOF >> $ifaces
+#Dat IP cho Controller node
+
+# LOOPBACK NET 
+auto lo
+iface lo inet loopback
+
+# EXT NETWORK
+auto eth0
+iface eth0 inet static
+address $MASTER
+netmask 255.255.255.0
+gateway $GATEWAY_IP
+dns-nameservers 8.8.8.8
+
+# DATA NETWORK
+auto eth1
+iface eth1 inet static
+address $LOCAL_IP
+netmask 255.255.255.0
+
+
+
+EOF
+
 echo "##### Thu hien update he thong truoc khi cai dat #####"
 sleep 3
 
@@ -7,8 +42,6 @@ apt-get install -y python-software-properties &&  add-apt-repository cloud-archi
 
 apt-get update && apt-get -y upgrade && apt-get -y dist-upgrade 
 
-eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
-eth1_address=`/sbin/ifconfig eth1 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
 
 iphost=/etc/hosts
 test -f $iphost.orig || cp $iphost $iphost.orig
