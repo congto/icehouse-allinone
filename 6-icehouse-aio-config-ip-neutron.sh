@@ -1,8 +1,11 @@
 #!/bin/bash -ex
 
-MASTER=192.168.1.55
-GATE_WAY=192.168.1.1
-
+eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
+eth1_address=`/sbin/ifconfig eth1 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
+MASTER=$eth0_address
+LOCAL_IP=$eth1_address
+GATEWAY_IP=192.168.1.1
+#
 echo "############Cai dat va cau hinh OpenvSwitch ######################"
 sleep 5
 apt-get install -y openvswitch-controller openvswitch-switch openvswitch-datapath-dkms
