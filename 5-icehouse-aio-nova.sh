@@ -11,12 +11,12 @@ MASTER=$eth0_address
 LOCAL_IP=$eth1_address
 GATEWAY_IP=192.168.1.1
 
-echo "########## CAI DAT NOVA TREN CONTROLLER################"
+echo "########## CAI DAT NOVA TREN CONTROLLER ################"
 sleep 5 
 
-apt-get install -y nova-api nova-cert nova-conductor nova-consoleauth nova-novncproxy nova-scheduler python-novaclient nova-compute nova-console
+apt-get install -y nova-api nova-cert nova-conductor nova-consoleauth nova-novncproxy nova-scheduler python-novaclient nova-compute nova-console nova-compute-kvm python-guestfs
 
-######## SAO LUU CAU HINH cho NOVA##################"
+echo "########## SAO LUU CAU HINH cho NOVA ##################"
 sleep 7
 
 #
@@ -82,30 +82,30 @@ admin_password = $ADMIN_PASS
 
 EOF
 
-echo "#############XOA FILE DB MAC DINH############"
+echo "############# XOA FILE DB MAC DINH ############"
 sleep 7
 rm /var/lib/nova/nova.sqlite
 
-echo "############DONG BO DB CHO NOVA##############"
+echo "############# DONG BO DB CHO NOVA ############"
 sleep 7 
 nova-manage db sync
 
-echo "#################KHOI DONG LAI NOVA###############"
+echo "############# KHOI DONG LAI NOVA ############"
 sleep 10
 service nova-api restart ;service nova-cert restart; service nova-consoleauth restart ;service nova-scheduler restart;service nova-conductor restart; service nova-novncproxy restart; service nova-compute restart; service nova-console restart
 sleep 5
-echo "########### KHOI DONG NOVA LAN 2################"
+echo "############# KHOI DONG NOVA LAN 2 ############"
 service nova-api restart ;service nova-cert restart; service nova-consoleauth restart ;service nova-scheduler restart;service nova-conductor restart; service nova-novncproxy restart; service nova-compute restart; service nova-console restart
 
 
-echo "#############KIEM TRAA LAI DICH VU NOVA##############"
+echo "############# KIEM TRAA LAI DICH VU NOVA ############"
 sleep 7
 nova-manage service list
 sleep 3
 nova-manage service list
 
 echo " "
-echo "############FIX LOI CHO NOVA##############"
+echo "############# FIX LOI CHO NOVA ############"
 sleep 5
 dpkg-statoverride --update --add root root 0644 /boot/vmlinuz-$(uname -r)
 
@@ -119,5 +119,5 @@ EOF
 
 chmod +x /etc/kernel/postinst.d/statoverride
 
-echo "############KET THUC CAI DAT NOVA##############"
+echo "############# KET THUC CAI DAT NOVA ############"
 
