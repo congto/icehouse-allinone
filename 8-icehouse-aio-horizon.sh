@@ -1,5 +1,8 @@
 #!/bin/bash -ex
 
+brex_address=`/sbin/ifconfig br-ex | awk '/inet addr/ {print $2}' | cut -f2 -d ":"`
+MASTER=$brex_address
+
 ###################
 echo " #### CAI DAT DASHBOARD ##### "
 ###################
@@ -20,3 +23,8 @@ echo "ServerName localhost" >> /etc/apache2/httpd.conf
 service apache2 restart
 service memcached restart
 echo "##### Hoan thanh cai dat Horizon #####"
+
+echo "##### THONG TIN DANG NHAP VAO HORIZON ##### "
+echo "URL: http://$MASTER/horizon"
+echo "User: Admin"
+echo "Pass: $ADMIN_PASS"
