@@ -176,6 +176,6 @@ cd /etc/init.d/; for i in $( ls neutron-* ); do sudo service $i restart; done
 cd /root/
 
 
-echo "###################KIEM TRA NEUTRON (cho 30s) ####################"
-sleep 40
+echo "###################KIEM TRA NEUTRON (cho 60s) ####################"
+sleep 60
 neutron agent-list
