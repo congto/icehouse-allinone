@@ -84,8 +84,7 @@ admin_user = nova
 admin_password = $ADMIN_PASS
 
 EOF
-chown nova $controlnova
-chgrp nova $controlnova
+chown nova:nova $controlnova
 
 echo "############# XOA FILE DB MAC DINH ############"
 sleep 7
