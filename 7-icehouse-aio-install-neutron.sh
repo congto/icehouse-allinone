@@ -166,6 +166,9 @@ use_namespaces = True
 
 EOF
 
+chown root:neutron /etc/neutron/*
+chown root:neutron $controlML2
+
 echo "###################KHOI DONG LAI NEUTRON ###############################"
 sleep 4
 cd /etc/init.d/; for i in $( ls neutron-* ); do sudo service $i restart; done
