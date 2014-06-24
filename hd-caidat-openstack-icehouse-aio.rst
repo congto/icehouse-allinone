@@ -106,6 +106,7 @@ Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Gla
 
 Script trên thực hiện cài đặt và cấu hình Glance. Sau đó thực hiển tải image cirros (một dạng lite lunix), có tác dụng để kiểm tra các 
 hoạt động của Keystone, Glance và sau này dùng để khởi tạo máy ảo.
+
 2.5 Cài đặt NOVA và kiểm tra hoạt động
 ----
 Cài đặt các gói về nova::
