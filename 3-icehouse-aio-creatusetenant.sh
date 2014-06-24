@@ -71,6 +71,7 @@ keystone user-role-add --tenant-id $SERVICE_TENANT --user-id $CINDER_USER --role
 #/*Định nghĩa Services và API Endpoint
 keystone service-create --name=keystone --type=identity --description="OpenStack Identity"
 keystone endpoint-create \
+--region RegionOne \
 --service-id=$(keystone service-list | awk '/ identity / {print $2}') \
 --publicurl=http://$MASTER:5000/v2.0 \
 --internalurl=http://$MASTER:5000/v2.0 \
@@ -78,6 +79,7 @@ keystone endpoint-create \
 
 keystone service-create --name=glance --type=image --description="OpenStack Image Service"
 keystone endpoint-create \
+--region RegionOne \
 --service-id=$(keystone service-list | awk '/ image / {print $2}') \
 --publicurl=http://$MASTER:9292/v2 \
 --internalurl=http://$MASTER:9292/v2 \
@@ -85,6 +87,7 @@ keystone endpoint-create \
 
 keystone service-create --name=nova --type=compute --description="OpenStack Compute"
 keystone endpoint-create \
+--region RegionOne \
 --service-id=$(keystone service-list | awk '/ compute / {print $2}') \
 --publicurl=http://$MASTER:8774/v2/%\(tenant_id\)s \
 --internalurl=http://$MASTER:8774/v2/%\(tenant_id\)s \
@@ -92,6 +95,7 @@ keystone endpoint-create \
 
 keystone service-create --name neutron --type network --description "OpenStack Networking"
 keystone endpoint-create \
+--region RegionOne \
 --service-id $(keystone service-list | awk '/ network / {print $2}') --publicurl http://$MASTER:9696 \
 --adminurl http://$MASTER:9696 \
 --internalurl http://$MASTER:9696
