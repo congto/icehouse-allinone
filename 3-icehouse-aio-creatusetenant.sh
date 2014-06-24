@@ -100,19 +100,21 @@ keystone endpoint-create \
 --adminurl http://$MASTER:9696 \
 --internalurl http://$MASTER:9696
 
-# keystone service-create --name=cinder --type=volume --description="OpenStack Block Storage"
-# keystone endpoint-create \
-# --service-id=$(keystone service-list | awk '/ volume / {print $2}') \
-# --publicurl=http://$MASTER:8776/v1/%\(tenant_id\)s \
-# --internalurl=http://$MASTER:8776/v1/%\(tenant_id\)s \
-# --adminurl=http://$MASTER:8776/v1/%\(tenant_id\)s
+keystone service-create --name=cinder --type=volume --description="OpenStack Block Storage"
+keystone endpoint-create \
+--region RegionOne \
+--service-id=$(keystone service-list | awk '/ volume / {print $2}') \
+--publicurl=http://$MASTER:8776/v1/%\(tenant_id\)s \
+--internalurl=http://$MASTER:8776/v1/%\(tenant_id\)s \
+--adminurl=http://$MASTER:8776/v1/%\(tenant_id\)s
 
-# keystone service-create --name=cinderv2 --type=volumev2 --description="OpenStack Block Storage v2"
-# keystone endpoint-create \
-# --service-id=$(keystone service-list | awk '/ volumev2 / {print $2}') \
-# --publicurl=http://$MASTER:8776/v2/%\(tenant_id\)s \
-# --internalurl=http://$MASTER:8776/v2/%\(tenant_id\)s \
-# --adminurl=http://$MASTER:8776/v2/%\(tenant_id\)s
+keystone service-create --name=cinderv2 --type=volumev2 --description="OpenStack Block Storage v2"
+keystone endpoint-create \
+--region RegionOne \
+--service-id=$(keystone service-list | awk '/ volumev2 / {print $2}') \
+--publicurl=http://$MASTER:8776/v2/%\(tenant_id\)s \
+--internalurl=http://$MASTER:8776/v2/%\(tenant_id\)s \
+--adminurl=http://$MASTER:8776/v2/%\(tenant_id\)s
 
 sleep 5
 echo "###########TAO FILE CHO BIEN MOI TRUONG##################"
