@@ -30,10 +30,12 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 
 - Ảnh thiết lập cấu hình cho Ubuntu server
 
-<img src=http://i.imgur.com/NpiF3HF.png width="50%" height="50%" />
+<img src=http://i.imgur.com/NpiF3HF.png width="70%" height="70%" />
 
 - Ảnh thiết lập network cho vmware workstation 
-![alt text]( http://i.imgur.com/pNg16qO.png)
+
+<img src=http://i.imgur.com/pNg16qO.pngwidth="70%" height="70%" />
+
 
 2. Thực hiện các script
 ----------
