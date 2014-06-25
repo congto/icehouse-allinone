@@ -49,7 +49,7 @@ Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ
 
 Thiết lập tên, khai báo file hosts, cấu hình ip address cho các NICs
    
-   >bash 0-icehouse-aio-prepare.sh
+        bash 0-icehouse-aio-prepare.sh
    
 Chú ý: Khi thưc hiện update hệ thống, nếu xuất hiện dòng dưới thì gõ ENTER để tiếp tục
 
