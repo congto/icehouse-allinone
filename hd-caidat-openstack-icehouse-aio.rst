@@ -112,24 +112,30 @@ hoạt động của Keystone, Glance và sau này dùng để khởi tạo máy
 Cài đặt các gói về nova::
 
    bash 5-icehouse-aio-install-nova.sh
+
+2.6 Cài đặt CINDER
+----
+Cài đặt các gói cho CINDER, cấu hình volume group::
+
+   bash 6-icehouse-aio-install-cinder
    
-2.6 Cài đặt OpenvSwich, cấu hình br-int, br-ex
+2.7 Cài đặt OpenvSwich, cấu hình br-int, br-ex
 ----
 Cài đặt OpenvSwtich và cấu hình br-int, br-ex cho Ubuntu::
   
-  bash 6-icehouse-aio-config-ip-neutron.sh
+  bash 7-icehouse-aio-config-ip-neutron.sh
   
-2.7 Cài đặt Neutron
+2.8 Cài đặt Neutron
 ----
 Cài đặt Neutron Server, ML, L3-agent, DHCP-agent, metadata-agent::
   
-  bash 7-icehouse-aio-install-neutron.sh
+  bash 8-icehouse-aio-install-neutron.sh
 
-2.8 Cài đặt Horizon
+2.9 Cài đặt Horizon
 ----
 Cài đặt Horizon để cung cấp GUI cho người dùng thao tác với OpenStack::
   
-  bash 8-icehouse-aio-install-horizon.sh
+  bash 9-icehouse-aio-install-horizon.sh
   
 
 3. Chuyển qua hướng dẫn sử dụng dashboard (horizon)
