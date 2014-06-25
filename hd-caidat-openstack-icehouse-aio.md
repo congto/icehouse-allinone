@@ -139,7 +139,7 @@ Chuyển qua hướng dẫn sử dụng dashboard (horizon)
 =============
 Truy cập vào dashboard với IP 192.168.1.55/horizon
 
-	User: Admin
+	User: admin hoặc demo
 	Pass: Welcome123
 
 
