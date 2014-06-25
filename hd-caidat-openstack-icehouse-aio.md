@@ -34,15 +34,15 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 
 - RAM 4GB
 - 1st HDD (sda) 60GB cài đặt Ubuntu server 12.04-4
-- 2nd HDD (sdb) Làm volume cho cinder
-- 3rd HDD (sdc) Dùng cho cấu hình swift
-- NIC 1st : External - dùng chế độ bridge - Dải IP 192.168.1.0/24 - dùng để ra (vào) internet.
+- 2nd HDD (sdb) Làm volume cho CINDER
+- 3rd HDD (sdc) Dùng cho cấu hình SWIFT
+- NIC 1st : External - dùng chế độ bridge - Dải IP 192.168.1.0/24 - Gateway 192.168.1.1
 - NIC 2nd : Inetnal VM - dùng chế độ vmnet4 (cần setup trong vmware workstation trước khi cài Ubuntu - dải IP  192.168.10.0/24
 
-| NIC 	       | IP ADDRESS     |   SUBNETMASK  | GATEWAY       | DNS     |
-| -------------|----------------|---------------|---------------|-------  |
-| NIC 1 (eth0) | 192.168.1.xxx  | 255.255.255.0 |192.168.1.1    | 8.8.8.8 |
-| NIC 2 (eth1) | 192.168.10.xxx | 255.255.255.0 |    NULL       |   NULL  |
+| NIC 	       | IP ADDRESS     |  SUBNET MASK  | GATEWAY       | DNS     |                   Note               |
+| -------------|----------------|---------------|---------------|-------  |--------------------------------------| 
+| NIC 1 (eth0) | 192.168.1.xxx  | 255.255.255.0 | 192.168.1.1   | 8.8.8.8 | Bridge trong VMware Workstation      |
+| NIC 2 (eth1) | 192.168.10.xxx | 255.255.255.0 |    NULL       |   NULL  | Dùng VMnet4 trong Vmware Workstation |
 
 - Mật khẩu cho tất cả các dịch vụ là Welcome123
 - Cài đặt với quyền root
