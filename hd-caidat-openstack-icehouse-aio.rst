@@ -37,7 +37,7 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 
 - Ảnh thiết lập network cho vmware workstation 
 
-<img src="http://i.imgur.com/pNg16qO.png">
+.. image:: http://i.imgur.com/NpiF3HF.png
 
 2. Thực hiện các script
 ----------
