@@ -5,17 +5,14 @@ Hướng dẫn cài đặt bằng script OpenStack Icehouse AIO
 
 
 # Thông tin LAB
-============
 - Cài đặt OpenStack Icehouse trên Ubuntu 12.04, môi trường giả lập vmware-workstation
 - Các thành phần cài đặt trong OpenStack: Keystone, Glance, Nova (sử dụng KVM), Neutron, Horizon
 - Neutron sử dụng plugin ML2, GRE và use case cho mô hình mạng là per-teanant per-router
 - Máy ảo sử dụng 2 Nics. Eth0 dành cho Extenal, API, MGNT. Eth1 dành cho Internal.
 
 # Các bước cài đặt
-============
-
 ## Cài đặt Ubuntu 12.04 trong Vmware Workstation
-----------
+
 Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặc máy vật lý như sau
 
 - RAM 4GB
@@ -37,7 +34,6 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 
 
 ## Thực hiện các script
-========
 
 Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ github về
 
@@ -49,23 +45,23 @@ Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ
 
 >chmod +x *.sh
 
-2.0 Update hệ thống và cài đặt các gói bổ trợ
---------
-Thiết lập tên, khai báo file hosts, cấu hình ip address cho các NICs::
+### Update hệ thống và cài đặt các gói bổ trợ
 
+Thiết lập tên, khai báo file hosts, cấu hình ip address cho các NICs
+   
    bash 0-icehouse-aio-prepare.sh
-
-Chú ý: Khi thưc hiện update hệ thống, nếu xuất hiện dòng dưới thì gõ ENTER để tiếp tục::
+   
+Chú ý: Khi thưc hiện update hệ thống, nếu xuất hiện dòng dưới thì gõ ENTER để tiếp tục
 
    More info: https://wiki.ubuntu.com/ServerTeam/CloudArchive
    Press [ENTER] to continue or ctrl-c to cancel adding it
 
-Sau khi thực hiện script trên xong, hệ thống sẽ khởi động lại. Lúc này bạn đăng nhập vào hệ thống và di chuyển vào thưc mục icehouse-allinone bằng lệnh::
+Sau khi thực hiện script trên xong, hệ thống sẽ khởi động lại. Lúc này bạn đăng nhập vào hệ thống và di chuyển vào thưc mục icehouse-allinone bằng lệnh
 
     cd icehouse-allinone
 
-2.1 Cài đặt MYSQL và tạo DB cho các thành phần
---------
+### Cài đặt MYSQL và tạo DB cho các thành phần
+
 Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron::
   
    bash 1-icehouse-aio-install-mysql.sh
