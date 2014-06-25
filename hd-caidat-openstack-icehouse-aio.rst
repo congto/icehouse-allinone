@@ -68,7 +68,7 @@ Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron::
   
    bash 1-icehouse-aio-install-mysql.sh
 
-2.2 Cài đặt keystone 
+2.2 Cài đặt KEYSTONE 
 -----------------
 Cài đặt và cấu hình file keystone.conf::
   
@@ -98,7 +98,7 @@ Thực thi lệnh source /etc/profile để khởi tạo biến môi trường::
    
 Script trên thực hiện tạo các teant có tên là admin, demo, service. Tạo ra service có tên là keystone, glance, nova, cinder, neutron swift
 
-2.4 Cài đặt Glance
+2.4 Cài đặt GLANCE
 ----
 Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài::
 
@@ -125,18 +125,23 @@ Cài đặt OpenvSwtich và cấu hình br-int, br-ex cho Ubuntu::
   
   bash 7-icehouse-aio-config-ip-neutron.sh
   
-2.8 Cài đặt Neutron
+2.8 Cài đặt NEUTRON
 ----
 Cài đặt Neutron Server, ML, L3-agent, DHCP-agent, metadata-agent::
   
   bash 8-icehouse-aio-install-neutron.sh
 
-2.9 Cài đặt Horizon
+2.9 Cài đặt HORIZON
 ----
 Cài đặt Horizon để cung cấp GUI cho người dùng thao tác với OpenStack::
   
   bash 9-icehouse-aio-install-horizon.sh
-  
+
+2.10 Tạo các subnet, router cho tenant
+-----
+Tạo sẵn subnet cho Public Network và Private Network trong teant ADMIN::
+
+  bash 99-creat-network.sh
 
 3. Chuyển qua hướng dẫn sử dụng dashboard (horizon)
 ----------
