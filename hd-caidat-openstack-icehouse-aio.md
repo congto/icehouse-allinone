@@ -115,35 +115,32 @@ Cài đặt các gói cho CINDER, cấu hình volume group:
     bash 6-icehouse-aio-install-cinder
    
 ### Cài đặt OpenvSwich, cấu hình br-int, br-ex
-----
+
 Cài đặt OpenvSwtich và cấu hình br-int, br-ex cho Ubuntu:
 
     bash 7-icehouse-aio-config-ip-neutron.sh
   
 ### Cài đặt NEUTRON
-----
 Cài đặt Neutron Server, ML, L3-agent, DHCP-agent, metadata-agent:
 
     bash 8-icehouse-aio-install-neutron.sh
 
 ### Cài đặt HORIZON
-
 Cài đặt Horizon để cung cấp GUI cho người dùng thao tác với OpenStack:
 
     bash 9-icehouse-aio-install-horizon.sh
 
 ### Tạo các subnet, router cho tenant
-
 Tạo sẵn subnet cho Public Network và Private Network trong teant ADMIN:
 
     bash 99-creat-network.sh
 
 Chuyển qua hướng dẫn sử dụng dashboard (horizon)
--------------
+=============
+Truy cập vào dashboard với IP 192.168.1.55/horizon
 
-Truy cập vào dashboard với IP 192.168.1.55/horizon 
-User: Admin
-Pass: Welcome123
+	User: Admin
+	Pass: Welcome123
 
 
 
