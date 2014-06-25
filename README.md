@@ -17,7 +17,7 @@ Liên hệ và trao đổi:
 
     Email: tcvn1985@gmail.com
     Skype: tu0ng_c0ng
-    Twitter: @tothanhcong
+    Twitter: twitter.com/tothanhcong
     Facebook: facebook.com/tcvn1985
 
 # [Hướng dẫn cài đặt OpenStack AIO](hd-caidat-openstack-icehouse-aio.md)
