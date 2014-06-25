@@ -62,7 +62,7 @@ Sau khi thực hiện script trên xong, hệ thống sẽ khởi động lại.
 
 ### Cài đặt MYSQL và tạo DB cho các thành phần
 
-Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron::
+* Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron::
   
    bash 1-icehouse-aio-install-mysql.sh
 
