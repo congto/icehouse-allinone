@@ -1,5 +1,25 @@
 # Hướng dẫn cài đặt bằng script OpenStack Icehouse AIO
 
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Hướng dẫn cài đặt bằng script OpenStack Icehouse AIO](#user-content-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-b%E1%BA%B1ng-script-openstack-icehouse-aio)
+- [Thông tin LAB](#user-content-th%C3%B4ng-tin-lab)
+- [Các bước cài đặt](#user-content-c%C3%A1c-b%C6%B0%E1%BB%9Bc-c%C3%A0i-%C4%91%E1%BA%B7t)
+	- [Cài đặt Ubuntu 12.04 trong Vmware Workstation](#user-content-c%C3%A0i-%C4%91%E1%BA%B7t-ubuntu-1204-trong-vmware-workstation)
+	- [Thực hiện các script](#user-content-th%E1%BB%B1c-hi%E1%BB%87n-c%C3%A1c-script)
+		- [Update hệ thống và cài đặt các gói bổ trợ](#user-content-update-h%E1%BB%87-th%E1%BB%91ng-v%C3%A0-c%C3%A0i-%C4%91%E1%BA%B7t-c%C3%A1c-g%C3%B3i-b%E1%BB%95-tr%E1%BB%A3)
+		- [Cài đặt MYSQL và tạo DB cho các thành phần](#user-content-c%C3%A0i-%C4%91%E1%BA%B7t-mysql-v%C3%A0-t%E1%BA%A1o-db-cho-c%C3%A1c-th%C3%A0nh-ph%E1%BA%A7n)
+		- [Cài đặt KEYSTONE](#user-content-c%C3%A0i-%C4%91%E1%BA%B7t-keystone)
+		- [Khai báo user, role, tenant, endpoint](#user-content-khai-b%C3%A1o-user-role-tenant-endpoint)
+		- [Cài đặt GLANCE](#user-content-c%C3%A0i-%C4%91%E1%BA%B7t-glance)
+		- [Cài đặt NOVA và kiểm tra hoạt động](#user-content-c%C3%A0i-%C4%91%E1%BA%B7t-nova-v%C3%A0-ki%E1%BB%83m-tra-ho%E1%BA%A1t-%C4%91%E1%BB%99ng)
+		- [Cài đặt CINDER](#user-content-c%C3%A0i-%C4%91%E1%BA%B7t-cinder)
+		- [Cài đặt OpenvSwich, cấu hình br-int, br-ex](#user-content-c%C3%A0i-%C4%91%E1%BA%B7t-openvswich-c%E1%BA%A5u-h%C3%ACnh-br-int-br-ex)
+		- [Cài đặt NEUTRON](#user-content-c%C3%A0i-%C4%91%E1%BA%B7t-neutron)
+		- [Cài đặt HORIZON](#user-content-c%C3%A0i-%C4%91%E1%BA%B7t-horizon)
+		- [Tạo các subnet, router cho tenant](#user-content-t%E1%BA%A1o-c%C3%A1c-subnet-router-cho-tenant)
+- [Chuyển qua hướng dẫn sử dụng dashboard (horizon)](#user-content-chuy%E1%BB%83n-qua-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-s%E1%BB%AD-d%E1%BB%A5ng-dashboard-horizon)
+
 # Thông tin LAB
 - Cài đặt OpenStack Icehouse trên Ubuntu 12.04, môi trường giả lập vmware-workstation
 - Các thành phần cài đặt trong OpenStack: Keystone, Glance, Nova (sử dụng KVM), Neutron, Horizon
