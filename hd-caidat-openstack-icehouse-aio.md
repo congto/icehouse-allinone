@@ -37,9 +37,9 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 
 
 2. Thực hiện các script
-----------
+========
 
-Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ github về::
+Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ github về
 
 >apt-get install git -y
 
@@ -50,7 +50,7 @@ Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ
 >chmod +x *.sh
 
 2.0 Update hệ thống và cài đặt các gói bổ trợ
------------------
+--------
 Thiết lập tên, khai báo file hosts, cấu hình ip address cho các NICs::
 
    bash 0-icehouse-aio-prepare.sh
@@ -65,7 +65,7 @@ Sau khi thực hiện script trên xong, hệ thống sẽ khởi động lại.
     cd icehouse-allinone
 
 2.1 Cài đặt MYSQL và tạo DB cho các thành phần
------------------
+--------
 Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron::
   
    bash 1-icehouse-aio-install-mysql.sh
