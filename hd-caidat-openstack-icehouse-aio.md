@@ -63,13 +63,13 @@ Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron:
 
     bash 1-icehouse-aio-install-mysql.sh
 
-1. Cài đặt KEYSTONE 
+### Cài đặt KEYSTONE 
 
 Cài đặt và cấu hình file keystone.conf:
 
     bash 2-icehouse-aio-instal-keystonel.sh
 
-2. Khai báo user, role, tenant, endpoint
+### Khai báo user, role, tenant, endpoint
 
 Thực thi biến môi trường :
 
@@ -93,7 +93,7 @@ Thực thi lệnh source /etc/profile để khởi tạo biến môi trường:
    
 Script trên thực hiện tạo các teant có tên là admin, demo, service. Tạo ra service có tên là keystone, glance, nova, cinder, neutron swift
 
-2.4 Cài đặt GLANCE
+### Cài đặt GLANCE
 
 Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài:
 
@@ -102,44 +102,44 @@ Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Gla
 Script trên thực hiện cài đặt và cấu hình Glance. Sau đó thực hiển tải image cirros (một dạng lite lunix), có tác dụng để kiểm tra các 
 hoạt động của Keystone, Glance và sau này dùng để khởi tạo máy ảo.
 
-2.5 Cài đặt NOVA và kiểm tra hoạt động
+### Cài đặt NOVA và kiểm tra hoạt động
 ----
 Cài đặt các gói về nova:
 
     bash 5-icehouse-aio-install-nova.sh
 
-2.6 Cài đặt CINDER
+### Cài đặt CINDER
 ----
 Cài đặt các gói cho CINDER, cấu hình volume group:
 
     bash 6-icehouse-aio-install-cinder
    
-2.7 Cài đặt OpenvSwich, cấu hình br-int, br-ex
+### Cài đặt OpenvSwich, cấu hình br-int, br-ex
 ----
 Cài đặt OpenvSwtich và cấu hình br-int, br-ex cho Ubuntu:
 
     bash 7-icehouse-aio-config-ip-neutron.sh
   
-2.8 Cài đặt NEUTRON
+### Cài đặt NEUTRON
 ----
 Cài đặt Neutron Server, ML, L3-agent, DHCP-agent, metadata-agent:
 
     bash 8-icehouse-aio-install-neutron.sh
 
-2.9 Cài đặt HORIZON
-----
+### Cài đặt HORIZON
+
 Cài đặt Horizon để cung cấp GUI cho người dùng thao tác với OpenStack:
 
     bash 9-icehouse-aio-install-horizon.sh
 
-2.10 Tạo các subnet, router cho tenant
------
+### Tạo các subnet, router cho tenant
+
 Tạo sẵn subnet cho Public Network và Private Network trong teant ADMIN:
 
     bash 99-creat-network.sh
 
-3. Chuyển qua hướng dẫn sử dụng dashboard (horizon)
-----------
+Chuyển qua hướng dẫn sử dụng dashboard (horizon)
+-------------
 
 Truy cập vào dashboard với IP 192.168.1.55/horizon 
 User: Admin
