@@ -1,8 +1,8 @@
-================================
-Cài đặt & HDSD OpenStack Icehouse AIO
-================================
+# Cài đặt & HDSD OpenStack Icehouse AIO
+Phiên bản: Nhiệt và đam mê. 22/06/2014
+***
 
-# Giới thiệu
+## Giới thiệu
 Hướng dẫn này được cung cấp giúp các bạn đã tìm hiểu tổng quan về Cloud Computing (dựa theo định nghĩa trong tài liệu NIST - Cloud Computing) và OpenStack có thể triển khai một cách gọn gàng và đủ tính năng tối thiểu cho mục đích trải nghiệm và tìm hiểu cách sử dụng OpenStack.
 
 Hướng dẫn được triển khai trên môi trường LAB (VMware Workstation), trên 1 máy chủ duy nhất có hỗ trợ công nghệ ảo hóa, x64. Trong phiên bản "Nhiệt & Đam Mê" của hướng dẫn này, mình tham khảo nguồn chính là docs của OpenStack và GOOGLE nên xin phép không trích dẫn lại các link khác ở đây. Một số script mình có chỉnh sửa lại đê tối giản các dòng lệnh và giải thích trong từng script.
@@ -20,9 +20,7 @@ Liên hệ và trao đổi:
     Twitter: twitter.com/tothanhcong
     Facebook: facebook.com/tcvn1985
 
-# [Hướng dẫn cài đặt OpenStack AIO](hd-caidat-openstack-icehouse-aio.md)
+## [Hướng dẫn cài đặt OpenStack AIO](hd-caidat-openstack-icehouse-aio.md)
 
-
-
-# [Hướng dẫn sử dụng OpenStack AIO](hd-sudung-openstack-icehouse-aio.rst)
+## [Hướng dẫn sử dụng OpenStack AIO](hd-sudung-openstack-icehouse-aio.rst)
 
