@@ -1,5 +1,5 @@
 # Hướng dẫn cài đặt bằng script OpenStack Icehouse AIO
-* * *
+*****
 
 # Thông tin LAB
 - Cài đặt OpenStack Icehouse trên Ubuntu 12.04, môi trường giả lập vmware-workstation
