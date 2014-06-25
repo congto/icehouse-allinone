@@ -77,12 +77,5 @@ service cinder-api restart
 service cinder-scheduler restart
 service cinder-volume restart
 
-echo "##### Hoan thanh viec cai dat CINDER ######
-
-
-
-
-
-
-
+echo "##### Hoan thanh viec cai dat CINDER ######"
 
