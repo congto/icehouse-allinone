@@ -35,7 +35,7 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 - RAM 4GB
 - 1st HDD (sda) 60GB cài đặt Ubuntu server 12.04-4
 - 2nd HDD (sdb) Làm volume cho cinder
-- 3rd HDD (sdv)) Dùng cho cấu hình swift
+- 3rd HDD (sdc) Dùng cho cấu hình swift
 - NIC 1st : External - dùng chế độ bridge - Dải IP 192.168.1.0/24 - dùng để ra (vào) internet.
 - NIC 2nd : Inetnal VM - dùng chế độ vmnet4 (cần setup trong vmware workstation trước khi cài Ubuntu - dải IP  192.168.10.0/24
 
