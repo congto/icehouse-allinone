@@ -49,7 +49,7 @@ Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ
 
 Thiết lập tên, khai báo file hosts, cấu hình ip address cho các NICs
    
-   bash 0-icehouse-aio-prepare.sh
+   - bash 0-icehouse-aio-prepare.sh
    
 Chú ý: Khi thưc hiện update hệ thống, nếu xuất hiện dòng dưới thì gõ ENTER để tiếp tục
 
@@ -57,8 +57,7 @@ Chú ý: Khi thưc hiện update hệ thống, nếu xuất hiện dòng dưới
    Press [ENTER] to continue or ctrl-c to cancel adding it
 
 Sau khi thực hiện script trên xong, hệ thống sẽ khởi động lại. Lúc này bạn đăng nhập vào hệ thống và di chuyển vào thưc mục icehouse-allinone bằng lệnh
-
-    cd icehouse-allinone
+   - cd icehouse-allinone
 
 ### Cài đặt MYSQL và tạo DB cho các thành phần
 
