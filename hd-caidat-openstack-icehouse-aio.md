@@ -36,7 +36,7 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 <img src=http://i.imgur.com/pNg16qO.png width="60%" height="60%" border="1">
 
 
-2. Thực hiện các script
+###### 2. Thực hiện các script
 ========
 
 Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ github về
