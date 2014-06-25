@@ -8,7 +8,9 @@ MYSQL_PASS=Welcome123
 #
 eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
 eth1_address=`/sbin/ifconfig eth1 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
-MASTER=$eth0_address
+brex_address=`/sbin/ifconfig br-ex | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
+# MASTER=$eth0_address
+MASTER=$brex_address 
 LOCAL_IP=$eth1_address
 GATEWAY_IP=192.168.1.1
 
@@ -46,7 +48,7 @@ rpc_backend = cinder.openstack.common.rpc.impl_kombu
 rabbit_host = $MASTER
 rabbit_port = 5672
 rabbit_userid = guest
-rabbit_password = $RABBIT_PASSWORD
+rabbit_password = $RABBIT_PASS
 glance_host = $MASTER
  
 [database]
@@ -59,7 +61,7 @@ auth_port = 35357
 auth_protocol = http
 admin_tenant_name = service
 admin_user = cinder
-admin_password = $SERVICE_PASSWORD
+admin_password = $ADMIN_PASS
 EOF
 
 # Phan quyen cho file cinder
