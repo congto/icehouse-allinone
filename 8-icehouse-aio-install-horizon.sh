@@ -19,6 +19,24 @@ sleep 5
 # sudo a2enconf servername 
 echo "ServerName localhost" >> /etc/apache2/httpd.conf
 
+
+# Tao trang redirect
+
+filehtml=/var/www/index.html
+test -f $filehtml.orig || cp $filehtml $filehtml.orig
+rm $filehtml
+touch $filehtml
+cat << EOF >> $filehtml
+<html>
+<head>
+<META HTTP-EQUIV="Refresh" Content="0.5; URL=http://$MASTER/horizon">
+</head>
+<body>
+<center> <h1>Dang chuyen den Dashboard cua OpenStack</h1> </center>
+</body>
+</html>
+EOF
+
 ## /* Khởi động lại apache và memcached
 service apache2 restart
 service memcached restart
@@ -28,3 +46,4 @@ echo "##### THONG TIN DANG NHAP VAO HORIZON ##### "
 echo "URL: http://$MASTER/horizon"
 echo "User: Admin"
 echo "Password:" $OS_PASSWORD
+
