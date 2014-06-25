@@ -6,16 +6,16 @@ MASTER=$eth0_address
 LOCAL_IP=$eth1_address
 GATEWAY_IP=192.168.1.1
 #
-echo "############Cai dat va cau hinh OpenvSwitch ######################"
+echo "########## Cai dat va cau hinh OpenvSwitch ##########"
 sleep 5
 apt-get install -y openvswitch-controller openvswitch-switch openvswitch-datapath-dkms
 
-echo "############# Cau hinh br-int va br-ex cho OpenvSwitch #################"
+echo "########## Cau hinh br-int va br-ex cho OpenvSwitch ##########"
 ovs-vsctl add-br br-int
 ovs-vsctl add-br br-ex
 ovs-vsctl add-port br-ex eth0
 
-echo "#############CAU HINH LAI NETWORK#################"
+echo "########## Cau hinh dia chi IP cho br-ex ##########"
 sleep 5 
 
 ifaces=/etc/network/interfaces
@@ -53,5 +53,5 @@ netmask 255.255.255.0
 #netmask 255.255.255.0
 EOF
 
-echo "############## KHOI DONG LAI MAY VAT LY #################"
+echo "##########  Khoi dong lai may sau khi cau hinh IP Address ##########"
 init 6

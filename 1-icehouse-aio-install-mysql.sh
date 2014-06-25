@@ -10,10 +10,12 @@ echo mysql-server mysql-server/root_password password $MYSQL_ADMIN_PASS | debcon
 echo mysql-server mysql-server/root_password_again password $MYSQL_ADMIN_PASS | debconf-set-selections
 apt-get update
 
+echo "########## Cai dat MYSQL ##########"
+sleep 3 
 apt-get -y install mysql-server python-mysqldb curl
 
 
-echo " ##### Cau hinh cho MYSQL #####"
+echo "########## Cau hinh cho MYSQL ##########"
 sleep 5
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
 #
@@ -24,7 +26,7 @@ character-set-server = utf8" /etc/mysql/my.cnf
 #
 service mysql restart
 
-echo " ##### Tao DATABASE #####"
+echo "########## Tao DATABASE ##########"
 sleep 5 
 
 cat << EOF | mysql -uroot -p$MYSQL_PASS
@@ -64,4 +66,4 @@ EOF
 #
 exit;
 
-echo "##### Hoan thanh viec ta DB #### "
+echo "########## Hoan thanh viec ta DB ##########"

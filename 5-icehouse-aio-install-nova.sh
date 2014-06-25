@@ -86,17 +86,17 @@ admin_password = $ADMIN_PASS
 EOF
 chown nova:nova $controlnova
 
-echo "############# XOA FILE DB MAC DINH ############"
+echo "########## XOA FILE DB MAC DINH ##########"
 sleep 7
 rm /var/lib/nova/nova.sqlite
 
-echo "############# DONG BO DB CHO NOVA ############"
+echo "########## DONG BO DB CHO NOVA ##########"
 sleep 7 
 nova-manage db sync
 
 
 echo " "
-echo "############# FIX LOI CHO NOVA ############"
+echo "########## FIX LOI CHO NOVA ##########"
 sleep 5
 dpkg-statoverride --update --add root root 0644 /boot/vmlinuz-$(uname -r)
 
@@ -110,18 +110,8 @@ EOF
 
 chmod +x /etc/kernel/postinst.d/statoverride
 
-echo "############# KHOI DONG LAI NOVA ############"
-sleep 10
-service nova-conductor restart
-service nova-api restart
-service nova-cert restart
-service nova-consoleauth restart
-service nova-scheduler restart
-service nova-novncproxy restart
-service nova-compute restart
-
+echo "########## KHOI DONG LAI NOVA ##########"
 sleep 5
-echo "############# KHOI DONG NOVA LAN 2 ############"
 service nova-conductor restart
 service nova-api restart
 service nova-cert restart
@@ -130,11 +120,21 @@ service nova-scheduler restart
 service nova-novncproxy restart
 service nova-compute restart
 
-echo "############# KIEM TRAA LAI DICH VU NOVA ############"
-sleep 7
+sleep 10
+echo "########## KHOI DONG NOVA LAN 2 ##########"
+service nova-conductor restart
+service nova-api restart
+service nova-cert restart
+service nova-consoleauth restart
+service nova-scheduler restart
+service nova-novncproxy restart
+service nova-compute restart
+
+echo "########## KIEM TRAA LAI DICH VU NOVA ##########"
+sleep 5
 nova-manage service list
 sleep 3
 nova-manage service list
 
-echo "############# KET THUC CAI DAT NOVA ############"
+echo "########## KET THUC CAI DAT NOVA ##########"
 

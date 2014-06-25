@@ -15,13 +15,13 @@ MASTER=$brex_address
 LOCAL_IP=$eth1_address
 GATEWAY_IP=192.168.1.1
 
-echo "########## CAI DAT NEUTRON TREN CONTROLLER################"
+echo "########## CAI DAT NEUTRON TREN CONTROLLER ##########"
 sleep 5
 apt-get -y install neutron-server neutron-plugin-ml2 neutron-plugin-openvswitch-agent \
 openvswitch-datapath-dkms neutron-l3-agent neutron-dhcp-agent
 
 ######## SAO LUU CAU HINH NEUTRON.CONF CHO CONTROLLER##################"
-echo "############ SUA FILE CAU HINH  NEUTRON CHO CONTROLLER##########"
+echo "########## Sua lai file neutron.conf ##########"
 sleep 7
 
 #
@@ -76,7 +76,7 @@ EOF
 
 
 ######## SAO LUU CAU HINH ML2 CHO CONTROLLER##################"
-echo "############ SUA FILE CAU HINH  ML2 CHO CONTROLLER##########"
+echo "########## Sau file cau hinh cho ml2_conf.ini ##########"
 sleep 7
 
 controlML2=/etc/neutron/plugins/ml2/ml2_conf.ini
@@ -112,7 +112,7 @@ EOF
 
 
 ######## SAO LUU CAU HINH METADATA CHO CONTROLLER##################"
-echo "############ SUA FILE CAU HINH  METADATA ##############"
+echo "########## Sua file cau hinh metadata_agent.ini ##########"
 sleep 7
 
 metadatafile=/etc/neutron/metadata_agent.ini
@@ -133,7 +133,7 @@ metadata_proxy_shared_secret = $METADATA_SECRET
 EOF
 
 ######## SUA FILE CAU HINH  DHCP ##################"
-echo "############ SUA FILE CAU HINH  DHCP #################"
+echo "########## Sua file cau hinh DHCP ##########"
 sleep 7
 
 dhcpfile=/etc/neutron/dhcp_agent.ini 
@@ -150,7 +150,7 @@ use_namespaces = True
 EOF
 
 ###################### SAO LUU CAU HINH L3 ###########################"
-echo "############ SUA FILE CAU HINH  L3 ####################"
+echo "########## Sua file cau hinh l3_agent.ini ##########"
 sleep 7
 
 
@@ -169,16 +169,16 @@ EOF
 chown root:neutron /etc/neutron/*
 chown root:neutron $controlML2
 
-echo "###################KHOI DONG LAI NEUTRON ###############################"
-sleep 4
+echo "########## KHOI DONG LAI NEUTRON ##########"
+sleep 5
 cd /etc/init.d/; for i in $( ls neutron-* ); do sudo service $i restart; done
 
-echo "###################KHOI DONG LAI NEUTRON  ###############################"
-sleep 10 
+echo "########## KHOI DONG LAI NEUTRON ##########"
+sleep 5
 cd /etc/init.d/; for i in $( ls neutron-* ); do sudo service $i restart; done
 cd /root/
 
 
-echo "###################KIEM TRA NEUTRON (cho 60s) ####################"
+echo "########## KIEM TRA NEUTRON (cho 60s) ##########"
 sleep 60
 neutron agent-list
