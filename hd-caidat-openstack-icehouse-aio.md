@@ -42,8 +42,11 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ github về::
 
 >apt-get install git -y
+
 >git clone https://github.com/congto/icehouse-allinone.git
+
 >cd icehouse-allinone
+
 >chmod +x *.sh
 
 2.0 Update hệ thống và cài đặt các gói bổ trợ
