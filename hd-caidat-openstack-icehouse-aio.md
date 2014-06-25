@@ -21,14 +21,14 @@
 		- [Tạo các subnet, router cho tenant](#user-content-t%E1%BA%A1o-c%C3%A1c-subnet-router-cho-tenant)
 - [Chuyển qua hướng dẫn sử dụng dashboard (horizon)](#user-content-chuy%E1%BB%83n-qua-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-s%E1%BB%AD-d%E1%BB%A5ng-dashboard-horizon)
 
-# Thông tin LAB
+# I. Thông tin LAB
 - Cài đặt OpenStack Icehouse trên Ubuntu 12.04, môi trường giả lập vmware-workstation
 - Các thành phần cài đặt trong OpenStack: Keystone, Glance, Nova (sử dụng KVM), Neutron, Horizon
 - Neutron sử dụng plugin ML2, GRE và use case cho mô hình mạng là per-teanant per-router
 - Máy ảo sử dụng 2 Nics. Eth0 dành cho Extenal, API, MGNT. Eth1 dành cho Internal.
 
-# Các bước cài đặt
-## Cài đặt Ubuntu 12.04 trong Vmware Workstation
+# II. Các bước cài đặt
+## 1. Cài đặt Ubuntu 12.04 trong Vmware Workstation
 
 Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặc máy vật lý như sau
 
@@ -50,7 +50,7 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 <img src=http://i.imgur.com/pNg16qO.png width="60%" height="60%" border="1">
 
 
-## Thực hiện các script
+## 2. Thực hiện các script
 
 Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ github về:
 
@@ -59,7 +59,7 @@ Thực hiện tải gói gile và phân quyền cho các file sau khi tải từ
     cd icehouse-allinone
     chmod +x *.sh
 
-### Update hệ thống và cài đặt các gói bổ trợ
+### 2.0 Update hệ thống và cài đặt các gói bổ trợ
 
 Thiết lập tên, khai báo file hosts, cấu hình ip address cho các NICs:
 
@@ -74,19 +74,19 @@ Sau khi thực hiện script trên xong, hệ thống sẽ khởi động lại.
 
     cd icehouse-allinone
 
-### Cài đặt MYSQL và tạo DB cho các thành phần
+### 2.1 Cài đặt MYSQL và tạo DB cho các thành phần
 
 Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron:
 
     bash 1-icehouse-aio-install-mysql.sh
 
-### Cài đặt KEYSTONE 
+### 2.2 Cài đặt KEYSTONE 
 
 Cài đặt và cấu hình file keystone.conf:
 
     bash 2-icehouse-aio-instal-keystonel.sh
 
-### Khai báo user, role, tenant, endpoint
+### 2.3 Khai báo user, role, tenant, endpoint
 
 Thực thi biến môi trường :
 
@@ -110,7 +110,7 @@ Thực thi lệnh source /etc/profile để khởi tạo biến môi trường:
    
 Script trên thực hiện tạo các teant có tên là admin, demo, service. Tạo ra service có tên là keystone, glance, nova, cinder, neutron swift
 
-### Cài đặt GLANCE
+### 2.4 Cài đặt GLANCE
 
 Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài:
 
@@ -119,40 +119,40 @@ Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Gla
 Script trên thực hiện cài đặt và cấu hình Glance. Sau đó thực hiển tải image cirros (một dạng lite lunix), có tác dụng để kiểm tra các 
 hoạt động của Keystone, Glance và sau này dùng để khởi tạo máy ảo.
 
-### Cài đặt NOVA và kiểm tra hoạt động
+### 2.5 Cài đặt NOVA và kiểm tra hoạt động
 ----
 Cài đặt các gói về nova:
 
     bash 5-icehouse-aio-install-nova.sh
 
-### Cài đặt CINDER
+### 2.6 Cài đặt CINDER
 ----
 Cài đặt các gói cho CINDER, cấu hình volume group:
 
     bash 6-icehouse-aio-install-cinder
    
-### Cài đặt OpenvSwich, cấu hình br-int, br-ex
+### 2.7 Cài đặt OpenvSwich, cấu hình br-int, br-ex
 
 Cài đặt OpenvSwtich và cấu hình br-int, br-ex cho Ubuntu:
 
     bash 7-icehouse-aio-config-ip-neutron.sh
   
-### Cài đặt NEUTRON
+### 2.8 Cài đặt NEUTRON
 Cài đặt Neutron Server, ML, L3-agent, DHCP-agent, metadata-agent:
 
     bash 8-icehouse-aio-install-neutron.sh
 
-### Cài đặt HORIZON
+### 2.9 Cài đặt HORIZON
 Cài đặt Horizon để cung cấp GUI cho người dùng thao tác với OpenStack:
 
     bash 9-icehouse-aio-install-horizon.sh
 
-### Tạo các subnet, router cho tenant
+### 2.10 Tạo các subnet, router cho tenant
 Tạo sẵn subnet cho Public Network và Private Network trong teant ADMIN:
 
     bash 99-creat-network.sh
 
-# Chuyển qua hướng dẫn sử dụng dashboard (horizon)
+# III. Chuyển qua hướng dẫn sử dụng dashboard (horizon)
 Truy cập vào dashboard với IP 192.168.1.55/horizon
 
 	User: admin hoặc demo
