@@ -1,5 +1,4 @@
 Hướng dẫn cài đặt bằng script OpenStack Icehouse AIO
-====
 * * *
 
 # Thông tin LAB
