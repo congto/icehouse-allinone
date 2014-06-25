@@ -19,7 +19,7 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 - NIC 1st : External - dùng chế độ bridge - Dải IP 192.168.1.0/24 - dùng để ra (vào) internet.
 - NIC 2nd : Inetnal VM - dùng chế độ vmnet4 (cần setup trong vmware workstation trước khi cài Ubuntu - dải IP  192.168.10.0/24
 - Mật khẩu cho tất cả các dịch vụ là Welcome123
-- Cài đặt với quyền root 
+- Cài đặt với quyền root
 
 - Ảnh thiết lập cấu hình cho Ubuntu server
 
