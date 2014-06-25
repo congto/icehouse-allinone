@@ -132,7 +132,6 @@ Tạo sẵn subnet cho Public Network và Private Network trong teant ADMIN:
 
     bash 99-creat-network.sh
 
-*****
 # Chuyển qua hướng dẫn sử dụng dashboard (horizon)
 Truy cập vào dashboard với IP 192.168.1.55/horizon
 
