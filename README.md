@@ -1,6 +1,6 @@
 # Cài đặt & HDSD OpenStack Icehouse AIO
-Phiên bản: Nhiệt và đam mê. 22/06/2014
-***
+- Phiên bản: Nhiệt và đam mê. 22/06/2014
+- Người tổng hợp: tu0ng_c0ng và những người bạn.
 
 ## Giới thiệu
 Hướng dẫn này được cung cấp giúp các bạn đã tìm hiểu tổng quan về Cloud Computing (dựa theo định nghĩa trong tài liệu NIST - Cloud Computing) và OpenStack có thể triển khai một cách gọn gàng và đủ tính năng tối thiểu cho mục đích trải nghiệm và tìm hiểu cách sử dụng OpenStack.
