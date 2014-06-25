@@ -1,6 +1,6 @@
 # Hướng dẫn cài đặt bằng script OpenStack Icehouse AIO
 
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+**MỤC LỤC**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
 - [Hướng dẫn cài đặt bằng script OpenStack Icehouse AIO](#user-content-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-b%E1%BA%B1ng-script-openstack-icehouse-aio)
 - [Thông tin LAB](#user-content-th%C3%B4ng-tin-lab)
