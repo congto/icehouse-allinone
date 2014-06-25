@@ -20,7 +20,7 @@ Thiết lập cấu hình cho Ubuntu Server 12.04 trong VMware Workstation hoặ
 - NIC 2nd : Inetnal VM - dùng chế độ vmnet4 (cần setup trong vmware workstation trước khi cài Ubuntu - dải IP  192.168.10.0/24
 - Mật khẩu cho tất cả các dịch vụ là Welcome123
 - Cài đặt với quyền root 
-- 
+
 - Ảnh thiết lập cấu hình cho Ubuntu server
 <img src=http://i.imgur.com/NpiF3HF.png width="60%" height="60%" border="1">
 
