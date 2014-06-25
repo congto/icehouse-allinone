@@ -8,9 +8,9 @@ MYSQL_PASS=Welcome123
 #
 eth0_address=`/sbin/ifconfig eth0 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
 eth1_address=`/sbin/ifconfig eth1 | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
-brex_address=`/sbin/ifconfig br-ex | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
-# MASTER=$eth0_address
-MASTER=$brex_address 
+# brex_address=`/sbin/ifconfig br-ex | awk '/inet addr/ {print $2}' | cut -f2 -d ":" `
+MASTER=$eth0_address
+# MASTER=$brex_address 
 LOCAL_IP=$eth1_address
 GATEWAY_IP=192.168.1.1
 
