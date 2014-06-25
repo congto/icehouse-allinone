@@ -133,7 +133,7 @@ Nếu xuất hiện cửa số dưới thì chọn (yes)
 
 Cài đặt các gói cho CINDER, cấu hình volume group:
 
-    bash 6-icehouse-aio-install-cinder
+    bash 6-icehouse-aio-install-cinder.sh
    
 ### 2.7 Cài đặt OpenvSwich, cấu hình br-int, br-ex
 
