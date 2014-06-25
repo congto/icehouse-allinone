@@ -120,13 +120,17 @@ Script trên thực hiện cài đặt và cấu hình Glance. Sau đó thực h
 hoạt động của Keystone, Glance và sau này dùng để khởi tạo máy ảo.
 
 ### 2.5 Cài đặt NOVA và kiểm tra hoạt động
-----
+
 Cài đặt các gói về nova:
 
     bash 5-icehouse-aio-install-nova.sh
 
+Nếu xuất hiện cửa số dưới thì chọn (yes)
+
+<img src=http://i.imgur.com/iIggDlR.png width="60%" height="60%">
+
 ### 2.6 Cài đặt CINDER
-----
+
 Cài đặt các gói cho CINDER, cấu hình volume group:
 
     bash 6-icehouse-aio-install-cinder
