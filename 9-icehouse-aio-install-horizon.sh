@@ -37,6 +37,9 @@ cat << EOF >> $filehtml
 </html>
 EOF
 
+# Cho phep chen password tren dashboad ( chi ap dung voi image tu dong )
+sed -i "s/'can_set_password': False/'can_set_password': True/g" /etc/openstack-dashboard/local_settings.py
+
 ## /* Khởi động lại apache và memcached
 service apache2 restart
 service memcached restart
