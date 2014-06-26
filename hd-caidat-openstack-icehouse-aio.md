@@ -90,7 +90,7 @@ Cài đặt MYSQL, tạo DB cho Keystone, Glance, Nova, Neutron:
 
 Cài đặt và cấu hình file keystone.conf:
 
-    bash 2-icehouse-aio-instal-keystonel.sh
+    bash 2-icehouse-aio-install-keystone.sh
 
 ### 2.3 Khai báo user, role, tenant, endpoint
 
