@@ -152,7 +152,7 @@ cp  admin-openrc.sh /root/admin-openrc.sh
 # export OS_TENANT_NAME=admin
 # export OS_AUTH_URL=http://$MASTER:35357/v2.0
 
-echo echo "########## Hoan thanh cai dat keystone ##########"
+echo "########## Hoan thanh cai dat keystone ##########"
 
 #echo "#################### Kiem tra bien moi truong ##################"
 #sleep 5
