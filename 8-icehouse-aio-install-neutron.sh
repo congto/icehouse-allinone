@@ -169,16 +169,16 @@ EOF
 chown root:neutron /etc/neutron/*
 chown root:neutron $controlML2
 
-echo "########## KHOI DONG LAI NEUTRON ##########"
+echo "########## KHOI DONG LAI NEUTRON        ##########"
 sleep 5
 cd /etc/init.d/; for i in $( ls neutron-* ); do sudo service $i restart; done
 
-echo "########## KHOI DONG LAI NEUTRON ##########"
+echo "########## KHOI DONG LAI NEUTRON (lan2) ##########"
 sleep 5
 cd /etc/init.d/; for i in $( ls neutron-* ); do sudo service $i restart; done
 cd /root/
 
 
-echo "########## KIEM TRA NEUTRON (cho 60s) ##########"
+echo "########## KIEM TRA NEUTRON (cho 60s)   ##########"
 sleep 60
 neutron agent-list
