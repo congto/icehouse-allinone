@@ -4,6 +4,8 @@ echo "########## Khai bao rule cho policy ##########"
 
 nova secgroup-add-group-rule default default icmp -1 -1
 nova secgroup-add-group-rule default default tcp 22 22
+nova secgroup-add-group-rule default default tcp 80 80
+nova secgroup-add-group-rule default default tcp 3389 3389
 
 
 #############
@@ -29,7 +31,7 @@ neutron net-create int_net
 
 echo "########## Tao subnet cho network trong tenant ##########"
 sleep 3
-neutron subnet-create int_net --name int_subnet --dns-nameserver 8.8.8.8 50.60.70.0/24
+neutron subnet-create int_net --name int_subnet --dns-nameserver 8.8.8.8 172.16.10.0/24
 
 
 #####################
