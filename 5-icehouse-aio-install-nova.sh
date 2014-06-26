@@ -144,7 +144,7 @@ service nova-scheduler restart
 service nova-novncproxy restart
 service nova-compute restart
 
-echo "########## KIEM TRAA LAI DICH VU NOVA ##########"
+echo "########## KIEM TRA LAI DICH VU NOVA ##########"
 sleep 5
 nova-manage service list
 sleep 3
