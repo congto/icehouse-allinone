@@ -120,7 +120,7 @@ Script trên thực hiện tạo các teant có tên là admin, demo, service. T
 
 Cài đặt GLACE và add image cirros để kiểm tra hoạt động của Glance sau khi cài:
 
-    bash 4-icehouse-aio-glance.sh
+    bash 4-icehouse-aio-install-glance.sh
 
 Script trên thực hiện cài đặt và cấu hình Glance. Sau đó thực hiển tải image cirros (một dạng lite lunix), có tác dụng để kiểm tra các 
 hoạt động của Keystone, Glance và sau này dùng để khởi tạo máy ảo.
