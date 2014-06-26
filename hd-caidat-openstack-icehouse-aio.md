@@ -131,7 +131,7 @@ Cài đặt các gói về nova:
 
     bash 5-icehouse-aio-install-nova.sh
 
-Nếu xuất hiện cửa số dưới thì chọn (yes)
+Nếu xuất hiện cửa số dưới khi cấu hình cho gói libguestfs0 thì chọn (yes)
 
 <img src=http://i.imgur.com/iIggDlR.png width="60%" height="60%">
 
