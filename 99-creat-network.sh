@@ -2,11 +2,9 @@
 
 echo "########## Khai bao rule cho policy ##########"
 
-nova secgroup-add-group-rule default default icmp -1 -1
-nova secgroup-add-group-rule default default tcp 22 22
-nova secgroup-add-group-rule default default tcp 80 80
-nova secgroup-add-group-rule default default tcp 3389 3389
-
+nova secgroup-add-rule default icmp -1 -1 0.0.0.0/0
+nova secgroup-add-rule default tcp 1 65535 0.0.0.0/0
+nova secgroup-add-rule default udp 1 65535 0.0.0.0/0
 
 #############
 # PROVIDER
