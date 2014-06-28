@@ -43,8 +43,8 @@ EOF
 echo "########## Thu hien update he thong truoc khi cai dat ##########"
 sleep 3
 
-apt-get install -y python-software-properties &&  add-apt-repository cloud-archive:icehouse 
-
+apt-get install -y python-software-properties && add-apt-repository cloud-archive:icehouse -y
+#
 apt-get update && apt-get -y upgrade && apt-get -y dist-upgrade 
 
 
