@@ -71,11 +71,6 @@ Thiết lập tên, khai báo file hosts, cấu hình ip address cho các NICs:
 
     bash 0-icehouse-aio-prepare.sh
    
-Chú ý: Khi thưc hiện update hệ thống, nếu xuất hiện dòng dưới thì gõ ENTER để tiếp tục
-
-    More info: https://wiki.ubuntu.com/ServerTeam/CloudArchive
-    Press [ENTER] to continue or ctrl-c to cancel adding it
-
 Sau khi thực hiện script trên xong, hệ thống sẽ khởi động lại. Lúc này bạn đăng nhập vào hệ thống và di chuyển vào thưc mục icehouse-allinone bằng lệnh:
 
     cd icehouse-allinone
