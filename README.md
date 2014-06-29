@@ -20,7 +20,7 @@ Liên hệ và trao đổi:
     Twitter: twitter.com/tothanhcong
     Facebook: facebook.com/tcvn1985
 
-## [Hướng dẫn cài đặt OpenStack AIO](hd-caidat-openstack-icehouse-aio.md)
+## [Hướng dẫn cài đặt OpenStack AIO](https://github.com/vietstacker/icehouse-aio-ubuntu/blob/master/hd-caidat-openstack-icehouse-aio.md)
 
 ## [Hướng dẫn sử dụng OpenStack AIO](hd-sudung-openstack-icehouse-aio.rst)
 
