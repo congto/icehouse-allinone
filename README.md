@@ -1,6 +1,6 @@
 # Chú ý: 30/06/2014
 
-Hiện hướng dẫn này đã được chuyển về repos của cộng đồng OpenStack tại VN để được hoàn thiện hơn. Mình tạm dừng hỗ trợ repos này để tập trung vào phiên bản cài đặt mới và hoàn chỉnh hơn tại link github sau:
+Hiện hướng dẫn này đã được chuyển về repos của cộng đồng VIETSTACK để được hoàn thiện hơn. Mình tạm dừng hỗ trợ repos này để tập trung vào phiên bản cài đặt mới và hoàn chỉnh hơn tại link github sau:
 
 https://github.com/vietstacker/icehouse-aio-ubuntu
 
