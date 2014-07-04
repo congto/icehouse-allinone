@@ -1,3 +1,4 @@
+<!--
 # Hướng dẫn cài đặt bằng script OpenStack Icehouse AIO
 
 **MỤC LỤC** 
@@ -166,11 +167,4 @@ Truy cập vào dashboard với IP 192.168.1.55/horizon
 	User: admin hoặc demo
 	Pass: Welcome123
 
-
-
-
-
-
-
-
-
+-->
