@@ -32,5 +32,7 @@ Liên hệ và trao đổi:
 -->
 ## [Hướng dẫn cài đặt OpenStack AIO](https://github.com/vietstacker/icehouse-aio-ubuntu/blob/master/hd-caidat-openstack-icehouse-aio.md)
 
+<!--
 ## [Hướng dẫn sử dụng OpenStack AIO](hd-sudung-openstack-icehouse-aio.rst)
+-->
 
