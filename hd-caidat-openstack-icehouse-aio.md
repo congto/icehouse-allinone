@@ -7,7 +7,7 @@ https://github.com/vietstacker/icehouse-aio-ubuntu
 Cám ơn sự quan tâm của các bạn !
 
 
--->
+
 <!--
 ## [Hướng dẫn sử dụng OpenStack AIO](hd-sudung-openstack-icehouse-aio.rst)
 -->
